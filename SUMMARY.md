@@ -8,4 +8,5 @@
 * [Divide and Conquer](Divide and Conquer.md)
 * [Binary Search](Binary Search.md)
 * [Dynamic Programming](Dynamic Programming.md)
+* Backtracking
 
