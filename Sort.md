@@ -1,7 +1,7 @@
 # Sort
 
 ##Bucket Sort Maximum Gap
-```
+```c++
 class Solution {
 public:
     int maximumGap(vector<int>& nums) {
@@ -42,7 +42,7 @@ public:
 ```
 
 ##Insert Interval
-```
+```c++
 Solution {
 public:
     vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
