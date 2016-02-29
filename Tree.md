@@ -1,7 +1,7 @@
 # Tree
 
 ##Pre Order Traverse
-```
+```c++
 class Solution {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
@@ -23,7 +23,7 @@ public:
 ```
 
 ##In Order Traverse
-```
+```c++
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
@@ -48,7 +48,7 @@ public:
 ```
 
 ##Post Order Traverse
-```
+```c++
 class Solution {
 public:
     vector<int> postorderTraversal(TreeNode* root) {
