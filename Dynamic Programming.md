@@ -1,7 +1,7 @@
 # Dynamic Programming
 
 ##Burst Balloons
-```
+```c++
 class Solution {
 public:
     int maxCoins(vector<int>& nums) {
@@ -27,7 +27,7 @@ public:
 ```
 
 ##Dungeon Game
-```
+```c++
 #define entry(a,b) (a==0?b:(a>=b?1:b-a))
 class Solution {
 public:
