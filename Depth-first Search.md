@@ -1,7 +1,7 @@
 # Depth-first Search
 
 ##Populating Next Right Pointers in Each Node
-```
+```c++
 class Solution {
 private:
     void dfs(TreeLinkNode* root, int level, vector<TreeLinkNode*> &rightmost){
@@ -23,7 +23,7 @@ public:
 ```
 
 ##Remove Invalid Parentheses
-```
+```c++
 class Solution {
 public:
     vector<string> removeInvalidParentheses(string s) {
@@ -74,7 +74,7 @@ private:
 ```
 
 ##Binary Tree Maximum Path Sum
-```
+```c++
 class Solution {
 private:
     int dfs(TreeNode* root,int &maxc){
