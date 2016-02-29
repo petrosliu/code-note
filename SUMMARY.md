@@ -16,4 +16,5 @@
 * [Design](Design.md)
 * [Topological Sort](Topological Sort.md)
 * [Trie](Trie.md)
+* Recursion
 
