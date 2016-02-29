@@ -1,7 +1,7 @@
 # Topological Sort
 
 ##Longest Increasing Path in a Matrix
-```
+```c++
 class Solution {
     int longestIncreasingPath(vector<vector<int>>& matrix,int i, int j, vector<vector<int>> &length){
         if(length[i][j]!=0)return length[i][j];
@@ -30,7 +30,7 @@ public:
 ```
 
 ##Course Schedule
-```
+```c++
 class Solution {
 private:
     bool dfs(int &i, int &numCourses, vector<vector<int>> &table, vector<int> &order, vector<int> &color, int &orderp){
