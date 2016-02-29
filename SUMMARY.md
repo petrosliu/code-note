@@ -12,5 +12,5 @@
 * [Stack](Stack.md)
 * [Sort](Sort.md)
 * [Tree](Tree.md)
-* Depth-first Search
+* [Depth-first Search](Depth-first Search.md)
 
