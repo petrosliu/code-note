@@ -16,8 +16,6 @@ Solution {
 public:
     int longestIncreasingPath(vector<vector<int>>& matrix) {
         if(!matrix.size()||!matrix[0].size())return 0;
-        //vector<int> item(matrix[0].size(),0);
-        //vector<vector<int>> length(matrix.size(),item);
         int length[matrix.size()*matrix[0].size()]={0};
         int maximum=0;
         for(int i=0;i<matrix.size();i++){
