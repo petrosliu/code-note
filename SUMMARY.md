@@ -9,4 +9,5 @@
 * [Binary Search](Binary Search.md)
 * [Dynamic Programming](Dynamic Programming.md)
 * [Backtracking](Backtracking.md)
+* Stack
 
