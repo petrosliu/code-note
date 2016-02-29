@@ -17,4 +17,5 @@
 * [Topological Sort](Topological Sort.md)
 * [Trie](Trie.md)
 * [Recursion](Recursion.md)
+* Memoization
 
