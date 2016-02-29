@@ -1,7 +1,7 @@
 # Design
 
 ##LRU Cache
-```
+```c++
 class LRUCache{
 private:
     unordered_map<int,pair<int,list<int>::iterator>> hashmap;
