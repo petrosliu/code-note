@@ -10,4 +10,5 @@
 * [Dynamic Programming](Dynamic Programming.md)
 * [Backtracking](Backtracking.md)
 * [Stack](Stack.md)
+* Sort
 
