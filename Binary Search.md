@@ -1,7 +1,7 @@
 # Binary Search
 
 ##Find Minimum in Rotated Sorted Array
-```
+```c++
 class Solution {
 public:
     int findMin(vector<int>& nums) {
@@ -24,7 +24,7 @@ public:
 ```
 
 ##Search in Rotated Sorted Array
-```
+```c++
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
@@ -52,7 +52,7 @@ public:
 ##Search in Rotated Sorted Array II
 *Duplicates are allowed.*
 
-```
+```c++
 class Solution {
 public:
     bool search(vector<int>& nums, int target) {
