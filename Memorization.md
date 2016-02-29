@@ -1,7 +1,7 @@
 # Memoization
 
 ##Longest Increasing Path in a Matrix
-```
+```c++
 Solution {
     int longestIncreasingPath(vector<vector<int>>& matrix,int i, int j, int length[]){
         if(length[i*matrix[0].size()+j]!=0)return length[i*matrix[0].size()+j];
