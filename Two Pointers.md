@@ -20,7 +20,7 @@ After $$m+1$$ steps, slow would be sure at the entry point $$D1 = D + (m+1) = C*
 
 6. At the second loop, fast should start from $$0$$ rather than $$num[0]$$, so that it would arrive entry point after $$m+1$$ steps.
 
-```
+```c++
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
@@ -40,7 +40,7 @@ public:
 ```
 
 ##Trapping Rain Water
-```
+```c++
 class Solution {
 public:
     int trap(vector<int>& height) {
@@ -71,7 +71,7 @@ public:
 ```
 
 ##4Sum
-```
+```c++
 class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
