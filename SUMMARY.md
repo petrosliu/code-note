@@ -6,4 +6,5 @@
 * [Two Pointers](Two Pointers.md)
 * [String](String.md)
 * [Divide and Conquer](Divide and Conquer.md)
+* Binary Search
 
