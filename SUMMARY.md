@@ -15,4 +15,5 @@
 * [Depth-first Search](Depth-first Search.md)
 * [Design](Design.md)
 * [Topological Sort](Topological Sort.md)
+* Trie
 
