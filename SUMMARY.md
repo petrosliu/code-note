@@ -13,5 +13,5 @@
 * [Sort](Sort.md)
 * [Tree](Tree.md)
 * [Depth-first Search](Depth-first Search.md)
-* Design
+* [Design](Design.md)
 
