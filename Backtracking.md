@@ -1,7 +1,7 @@
 # Backtracking
 
 ##N-Queens
-```
+```c++
 class Solution {
     int locateLTRD(int row,int col, int n){
         return n-col+row-1;
