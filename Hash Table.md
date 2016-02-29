@@ -1,7 +1,7 @@
 #Hash Table
 
 ##Copy List with Random Pointer
-```
+```c++
 class Solution {
 public:
     RandomListNode *copyRandomList(RandomListNode *head) {
@@ -33,7 +33,7 @@ public:
 ```
 
 ##Longest Consecutive Sequence
-```
+```c++
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
@@ -59,7 +59,7 @@ public:
 ```
 
 ##Max Points on a Line
-```
+```c++
 class Solution {
 public:
     int maxPoints(vector<Point> &points) {
