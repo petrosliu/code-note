@@ -1,7 +1,7 @@
 # Linked List
 
 ##Reverse Nodes in k-Group
-```
+```c++
 class Solution {
     bool check(ListNode* head, int k){
         int i=0;
