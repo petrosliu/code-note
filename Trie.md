@@ -1,7 +1,7 @@
 # Trie
 
 ##Implement Trie
-```
+```c++
 class Trie {
 private:
     class TrieNode {
@@ -34,7 +34,7 @@ public:
 ```
 
 ##Word Ladder
-```
+```c++
 typedef vector<string> Parents;
 typedef unordered_map<string,Parents> Layer;
 typedef vector<Layer> SearchTree;
@@ -130,7 +130,7 @@ public:
 ```
 
 ##Word Search
-```
+```c++
 class Trie {
 private:
     class TrieNode {
