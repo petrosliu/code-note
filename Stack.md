@@ -1,7 +1,7 @@
 # Stack
 
 ##Basic Calculator
-```
+```c++
 class Solution {
 public:
     int calculate(const string &s) {
