@@ -14,4 +14,5 @@
 * [Tree](Tree.md)
 * [Depth-first Search](Depth-first Search.md)
 * [Design](Design.md)
+* Topological
 
