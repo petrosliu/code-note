@@ -1,4 +1,4 @@
-# Topological
+# Topological Sort
 
 ##Longest Increasing Path in a Matrix
 ```
