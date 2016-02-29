@@ -11,4 +11,5 @@
 * [Backtracking](Backtracking.md)
 * [Stack](Stack.md)
 * [Sort](Sort.md)
+* Tree
 
