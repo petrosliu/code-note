@@ -1,7 +1,7 @@
 # Divide and Conquer
 
 ##Expression Add Operators
-```
+```c++
 class Solution {
 private:
     void dfs(string &num, string prev, const int start, const long target, long* table, vector<string> &ans, const long p){
