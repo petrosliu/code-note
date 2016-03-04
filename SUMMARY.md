@@ -11,6 +11,7 @@
 * [Backtracking](Backtracking.md)
 * [Stack](Stack.md)
 * [Sort](Sort.md)
+* Bit Manipulation
 * [Tree](Tree.md)
 * [Depth-first Search](Depth-first Search.md)
 * [Design](Design.md)
