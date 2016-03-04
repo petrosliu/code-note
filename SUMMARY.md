@@ -11,13 +11,12 @@
 * [Backtracking](Backtracking.md)
 * [Stack](Stack.md)
 * [Sort](Sort.md)
-* Bit Manipulation
+* [Bit Manipulation](Bit Manipulation.md)
 * [Tree](Tree.md)
 * [Depth-first Search](Depth-first Search.md)
 * [Design](Design.md)
 * [Topological Sort](Topological Sort.md)
 * [Trie](Trie.md)
 * [Recursion](Recursion.md)
-   * Bit Manipulation
 * [Memoization](Memorization.md)
 
