@@ -108,3 +108,22 @@ public:
     }
 };
 ```
+
+##Container With Most Water
+```c++
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int len=height.size();
+        if(len<2)return 0;
+        int i=0,j=len-1,maxi=0;
+        while(i<j){
+            int h=min(height[i],height[j]);
+            maxi=max(maxi,h*(j-i));
+            while(i<j&&height[i]<=h)i++;
+            while(i<j&&height[j]<=h)j--;
+        }
+        return maxi;
+    }
+};
+```
