@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Hash Table](Hash Table.md)
 * [Linked List](Linked List.md)
+* [Math](Math.md)
 * [Two Pointers](Two Pointers.md)
 * [String](String.md)
 * [Divide and Conquer](Divide and Conquer.md)
