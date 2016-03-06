@@ -1,6 +1,5 @@
 # Math
 
-
 ##Divide Two Integers
 ```c++
 class Solution {
@@ -22,6 +21,22 @@ public:
             tmp>>=1;
         }
         return (sign)?ans:-ans;
+    }
+};
+```
+
+##Self Crossing
+```c++
+class Solution {
+public:
+    bool isSelfCrossing(vector<int>& x) {
+        int len = x.size();
+        for(int i=3; i<len;++i){
+            if(x[i]>=x[i-2] && x[i-1]<=x[i-3]) return true;
+            if(i>=4 && x[i-1]==x[i-3] && x[i]+x[i-4]>=x[i-2]) return true;
+            if(i>=5 && x[i-2]>=x[i-4] && x[i]+x[i-4]>=x[i-2] && x[i-1]<=x[i-3] && x[i-5]+x[i-1]>=x[i-3]) return true;
+        }
+        return false;
     }
 };
 ```
