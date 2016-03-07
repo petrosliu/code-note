@@ -54,3 +54,26 @@ public:
     }
 };
 ```
+
+##Distinct Subsequences
+```c++
+class Solution {
+public:
+    int numDistinct(string s, string t) {
+        int slen=s.size(),tlen=t.size();
+        if(!slen||!tlen) return 0;
+        int sum[2][slen+1];
+        for(int i=0;i<=slen;i++) sum[0][i]=1;
+        
+        for(int i=0;i<tlen;i++){
+            const char c=t[i];
+            int last=i%2,curr=1-last;
+            sum[curr][i-1]=sum[last][i-1];
+            for(int j=i;j<=slen;j++){
+                sum[curr][j]=sum[curr][j-1]+((s[j-1]==c)?sum[last][j-1]:0);
+            }
+        }
+        return sum[tlen%2][slen];
+    }
+};
+```
