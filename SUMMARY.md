@@ -16,6 +16,7 @@
 * [Bit Manipulation](Bit Manipulation.md)
 * [Tree](Tree.md)
 * [Depth-first Search](Depth-first Search.md)
+* [Graph](Graph.md)
 * [Design](Design.md)
 * [Topological Sort](Topological Sort.md)
 * [Trie](Trie.md)
