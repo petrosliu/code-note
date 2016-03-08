@@ -77,3 +77,20 @@ public:
     }
 };
 ```
+
+##Maximum Subarray
+```c++
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int sum=INT_MIN, lsummin=0, lsum=0, rsum=0;
+        for(auto n:nums){
+            lsum=rsum;
+            rsum=lsum+n;
+            lsummin=min(lsummin,lsum);
+            sum=max(sum,rsum-lsummin);
+        }
+        return sum;
+    }
+};
+```
