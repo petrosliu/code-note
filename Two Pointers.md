@@ -127,3 +127,22 @@ public:
     }
 };
 ```
+
+##Minimum Size Subarray Sum
+```c++
+class Solution {
+public:
+    int minSubArrayLen(int s, vector<int>& nums) {
+        int n=nums.size(), j=0, sum=0, l=0x7FFFFFFF;
+        for (int i=0;i<n;i++) { 
+            sum+=nums[i]; 
+            while(sum>=s){
+                l=min(l,i-j+1);
+                sum-=nums[j];
+                j++;
+            }
+        }
+        return (l>n)?0:l;
+    }
+};
+```
