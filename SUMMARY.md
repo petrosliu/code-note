@@ -22,5 +22,5 @@
 * [Trie](Trie.md)
 * [Recursion](Recursion.md)
 * [Memoization](Memorization.md)
-* Thread
+* [Thread](Thread.md)
 
