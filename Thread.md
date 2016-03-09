@@ -9,8 +9,10 @@
 #include <chrono>
 #include <condition_variable>
 using namespace std;
+
 mutex mu;
 condition_variable cond;
+
 class Buffer {
 public:
     void add(int num) {
