@@ -47,10 +47,10 @@ public:
     Producer(Buffer* buffer):Person(buffer){};
     void run() {
         while (true) {
-            int num = rand() % 100;
+            int num = rand()%100;
             _buffer->add(num);
             cout << "Produced: " << num << endl;
-            this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
+            this_thread::sleep_for(chrono::milliseconds(rand()%2000));
         }
     }
 };
@@ -62,7 +62,7 @@ public:
         while (true) {
             int num = _buffer->remove();
             cout << "Consumed: " << num << endl;
-            this_thread::sleep_for(chrono::milliseconds(rand() % 2000));
+            this_thread::sleep_for(chrono::milliseconds(rand()%2000));
         }
     }
 };
