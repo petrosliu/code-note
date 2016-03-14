@@ -1,5 +1,18 @@
 # String
 
+##Rotation
+```c++
+class Solution {
+public:
+    bool isRotated(string a, string b){
+        int len=a.size();
+        if(len==0 || len!=b.size()) return false;
+        a+=a;
+        return a.find(b)!=string::npos;
+    }
+};
+```
+
 ##Wildcard Matching
 ```c++
 class Solution {
