@@ -40,3 +40,27 @@ public:
     }
 };
 ```
+
+##K Nearest Neighbor
+```c++
+class Solution {
+public:
+    vector<pair<int,int>> knn(const vector<pair<int,int>> &points, const pair<int,int> &origin, const unsigned int k){
+        int num=points.size();
+        if(k>num) return points;
+        set<pair<int,int>> q;
+        for(int i=0;i<num;i++){
+            const pair<int,int>& p=points[i];
+            int dist=(p.first-origin.first)*(p.first-origin.first)+(p.second-origin.second)*(p.second-origin.second);
+            q.insert(make_pair(dist, i));
+        }
+        
+        vector<pair<int,int>> ans;
+        int i=0;
+        for(auto ite=q.begin();ite!=q.end() && i<k; ite++, i++){
+            ans.push_back(points[ite->second]);
+        }
+        return ans;
+    }
+};
+```
