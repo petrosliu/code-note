@@ -27,3 +27,23 @@ public:
     }
 };
 ```
+
+##Gray Code
+```c++
+class Solution {
+public:
+    bool areGrayCode(int a, int b){
+        int x=a^b;
+        return (x&(x-1))==0;
+    }
+    
+    vector<int> grayCode(int n) {
+        vector<int> ans(1<<n,0);
+        for(int i=0;i<n;i++){
+            int len=1<<i;
+            for(int j=0;j<len;j++) ans[(len<<1)-j-1]=ans[j]|len;
+        }
+        return ans;
+    }
+};
+```
