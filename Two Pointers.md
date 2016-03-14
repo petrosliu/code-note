@@ -1,6 +1,38 @@
 # Two Pointers
+##Linked List Cycle
+1. $$slow=l+k+n_1r$$
+
+ $$fast=l+k+n_2r=2l+2k+2n_1r$$
+
+2. $$l+k=nr$$
+
+3. $$slow+l=l+nr+n_1r$$
+
+```c++
+class Solution {
+public:
+    ListNode* detectCycle(ListNode* head) {
+        if(!head) return NULL;
+        ListNode* fast=head, *slow=head;
+        while(fast && fast->next){
+            slow=slow->next;
+            fast=fast->next->next;
+            if(fast==slow) break;
+        }
+        if(!fast || !fast->next) return NULL;
+        slow=head;
+        while(slow!=fast){
+            slow=slow->next;
+            fast=fast->next;
+        }
+        return slow;
+    }
+};
+```
+
 
 ##Find the Duplicate Number
+
 1. 
 Suppose there is $$m$$ steps from $$num[0]$$ to entry point, and the length of circle is $$n$$ steps.
 
