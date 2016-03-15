@@ -21,6 +21,7 @@
 * [Topological Sort](Topological Sort.md)
 * [Trie](Trie.md)
 * [Recursion](Recursion.md)
+* [Binary Indexed Tree](Binary Indexed Tree.md)
 * [Memoization](Memorization.md)
 * [Memory](Memory.md)
 * [Thread](Thread.md)
