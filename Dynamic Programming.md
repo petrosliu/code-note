@@ -94,3 +94,39 @@ public:
     }
 };
 ```
+
+##Length of Longest Arithmetic Sequence
+```c++
+class Solution {
+public:
+    int lenghtOfLongestAP(vector<int> &nums){
+        int len=nums.size();
+        if (len<=1) return len;
+        sort(nums.begin(),nums.end());
+        int L[len][len];
+        int llap = 2;
+
+        for (int i = 0; i < len; i++) L[i][len-1] = 2;
+        for (int j=len-2; j>=1; j--){
+            int i = j-1, k = j+1, mid=nums[j];
+            while (i >= 0 && k <= len-1){
+                if (nums[i] + nums[k] < 2*mid) k++;
+                else if (nums[i] + nums[k] > 2*mid){
+                    L[i][j] = 2;
+                    i--;
+                }
+                else{
+                    L[i][j] = L[j][k] + 1;
+                    llap = max(llap, L[i][j]);
+                    i--; k++;
+                }
+            }
+            while (i >= 0){
+                L[i][j] = 2;
+                i--;
+            }
+        }
+        return llap;
+    }
+};
+```
