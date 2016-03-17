@@ -11,6 +11,7 @@
 * [Dynamic Programming](Dynamic Programming.md)
 * [Backtracking](Backtracking.md)
 * [Stack](Stack.md)
+* [Queue](Queue.md)
 * [Greedy](Greedy.md)
 * [Sort](Sort.md)
 * [Bit Manipulation](Bit Manipulation.md)
