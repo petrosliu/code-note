@@ -1,4 +1,11 @@
-My Awesome Book
+Code Note
 =======
+####[About Me](http://liuyid.in/) $$\cdot$$ [Github](https://github.com/petrosliu/code-note)
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+This is a notebook for C++ coding interviews. Most solutions passed [LeetCode](https://leetcode.com/) OJ correctly and efficiently. Any correction is appreciated.
+
+<a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+</a>
+
