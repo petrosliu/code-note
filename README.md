@@ -1,6 +1,6 @@
 Code Note
 =======
-####[About Me](http://liuyid.in/) $$\cdot$$ [Github](https://github.com/petrosliu/code-note)
+####[About Me](http://liuyid.in/) · [Github](https://github.com/petrosliu/code-note)
 
 This is a notebook for C++ coding interviews. Most solutions passed [LeetCode](https://leetcode.com/) OJ correctly and efficiently. Any correction is appreciated.
 
