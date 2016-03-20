@@ -6,6 +6,6 @@ This is a notebook for C++ coding interviews. Most solutions passed [LeetCode](h
 
 <a rel="license"
      href="http://creativecommons.org/publicdomain/zero/1.0/">
-    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;width:60px;" alt="CC0" />
 </a>
 
