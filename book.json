@@ -1,8 +1,14 @@
 {
-    "plugins": ["ga"],
+    "plugins": ["ga","sitemap","copy-code-button","github"],
     "pluginsConfig": {
         "ga": {
             "token": "UA-71764085-1"
+        },
+        "sitemap": {
+            "hostname": "http://codenote.liuyid.in/"
+        },
+        "github": {
+            "url": "https://github.com/petrosliu/code-note"
         }
     }
 }
