@@ -26,4 +26,3 @@
 * [Memoization](Memorization.md)
 * [Memory](Memory.md)
 * [Thread](Thread.md)
-* [About Me](http://liuyid.in)
