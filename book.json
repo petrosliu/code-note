@@ -1,6 +1,7 @@
 {
+    "title": "Code Note · Yiding Liu",
     "gitbook": ">=3.0.0-pre.0",
-    "plugins": ["ga","copy-code-button","github","sitemap"],
+    "plugins": ["ga","copy-code-button","github","sitemap","mathjax"],
     "pluginsConfig": {
         "ga": {
             "token": "UA-71764085-1"
