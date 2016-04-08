@@ -85,14 +85,14 @@ class Liger : public Tiger, public Lion { /* ... */ };
 
 |Expression | As member function | As non-member function | Example|
 | - | - | - | -|
-|@a | (a).operator@ ( ) | operator@ (a) | !cin calls cin.operator!()|
-|a@b | (a).operator@ (b) | operator@ (a, b) | cout << 42 calls std::cout.operator<<(42)|
-|a@ | (a).operator@ (int) | operator@ (a, int) | - |
-|a=b | (a).operator= (b) | - | string s; s = "abc"; calls s.operator=("abc")|
-|a(b...) | (a).operator()(b...) | - | random_device r; auto n = r(); calls r.operator()()|
-|a[b] | (a).operator[](b) | - | map< int, int > m; m[1] = 2; calls m.operator[](1)|
-|a-> | (a).operator-> ( ) | - | auto p = make_unique< T >(); p->bar() calls p.operator->()|
-|a@ | (a).operator@ (0) | operator@ (a, 0) | vector< int >::iterator i = v.begin(); i++ calls i.operator++(0)|
+|@a | `(a).operator@ ( )` | `operator@ (a)` | !cin calls cin.operator!()|
+|a@b | `(a).operator@ (b)` | `operator@ (a, b)` | cout << 42 calls std::cout.operator<<(42)|
+|a@ | `(a).operator@ (int)` | `operator@ (a, int)` | - |
+|a=b | `(a).operator= (b)` | - | string s; s = "abc"; calls s.operator=("abc")|
+|a(b...) | `(a).operator()(b...)` | - | random_device r; auto n = r(); calls r.operator()()|
+|a[b] | `(a).operator[](b)` | - | map< int, int > m; m[1] = 2; calls m.operator[](1)|
+|a-> | `(a).operator-> ( )` | - | auto p = make_unique< T >(); p->bar() calls p.operator->()|
+|a@ | `(a).operator@ (0)` | `operator@ (a, 0)` | vector< int >::iterator i = v.begin(); i++ calls i.operator++(0)|
 
 ```c++
 T T::operator+(const T2 &b) const; //Inside class definition
