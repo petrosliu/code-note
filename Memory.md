@@ -1,5 +1,8 @@
 # Memory
 
+* **The stack**: All variables declared inside the function will take up memory from the stack.
+* **The heap**: This is unused memory of the program and can be used to allocate the memory dynamically when program runs.
+
 ##Aligned Malloc
 ```c++
 #include <cstdlib>
