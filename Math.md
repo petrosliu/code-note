@@ -64,3 +64,27 @@ public:
     }
 };
 ```
+
+##Count Primes
+```c++
+class Solution {
+public:
+    int countPrimes(const int n) {
+        if (n<=2) return 0;
+        bool passed[n>>1] = {};
+        int counter = 1;
+        const int upper = sqrt(n);
+        for (int i=3; i<n; i+=2) {
+            if (!passed[i>>1]) {
+                counter++;
+                if (i <= upper) {
+                    for (int j=i*i; j<n; j+=2*i) {
+                        passed[j>>1] = true;
+                    }
+                }
+            }
+        }
+        return counter;
+    }
+};
+```
