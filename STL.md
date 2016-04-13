@@ -214,6 +214,8 @@
   key = it->first; value = it->second
   
   mymap.find(input) == mymap.end()
+  pair <int,int> bar=make_pair (10,20);
+  mymap.insert(bar);
   mymap.erase ( mymap.begin() );      // erasing by iterator
   mymap.erase ("France");             // erasing by key
   mymap.erase ( mymap.find("China"), mymap.end() ); // erasing by range, unstable in unordered_map
@@ -225,12 +227,97 @@ vector<T>::iterator it;
 list<T>::iterator it;
 deque<T>::iterator it；
 ```
-`*, ++, ==, !=, =`
+`*`, `++`, `==`, `!=`, `=`
 
 ##Algorithm
+```c++
+  #include <algorithm>
+
+  for_each (myvector.begin(), myvector.end(), myfunction);
+  int * p = find (myints, myints+4, 30);
+  copy ( myints, myints+7, myvector.begin() );
+  swap(x,y);
+  reverse(myvector.begin(),myvector.end());
+  it = std::unique (myvector.begin(), myvector.end());
+  myvector.resize( distance(myvector.begin(),it) );
+
+  sort (myvector.begin(), myvector.begin()+4);
+  sort (myvector.begin()+4, myvector.end(), myfunction);
+  min(1,2);
+  max(1,2);
+  *min_element(myints,myints+7);
+  *max_element(myints,myints+7);
+
+  vector<int> v={10,20,30,5,15};
+  make_heap (v.begin(),v.end());
+  pop_heap (v.begin(),v.end()); 
+  v.pop_back();
+  v.push_back(99);
+  push_heap (v.begin(),v.end());
+  sort_heap (v.begin(),v.end()); // for output
+```
 
 ##Function object
-
+```c++
+  equal_to<int>()
+  greater<int>()
+  greater_equal<int>()
+  less<int>()
+  less_equal<int>()
+```
 ##Adaptor
+
+###stack
+```c++
+  #include <stack>
+  stack<int> first; // deque is default container
+  stack<int, vector<int>> second;
+  stack<int, list<int>> third; //useless
+  mystack.empty();
+  mystack.size();
+  mystack.top() -= 5;
+  mystack.push(5);
+  mystack.pop();
+```
+
+###queue
+```c++
+  #include <queue>
+  std::queue<int> first; // deque is default container
+  std::queue<int,list<int>> second;
+  myqueue.empty();
+  myqueue.size();
+  myqueue.front();
+  myqueue.back();
+  myqueue.push(5);
+  myqueue.pop();
+```
+###priority queue
+```c++
+  #include <queue>
+  priority_queue<int> first; // vector is default containter
+  priority_queue<int, vector<int>, less<int>> second;
+  priority_queue<int, deque<int>, greater<int>> third;
+  mypq.empty();
+  mypq.size();
+  mypq.top(); // output the highest element with default less
+  mypq.push(5);
+  myqueue.pop();
+```
+key-value priority queue
+```c++
+  #include <unordered_map>
+  #include <queue>
+  
+  class mycomp{
+  public:
+    bool operator() (const unordered_map<char, int>::iterator &lhs, const unordered_map<char, int>::iterator &rhs) const {
+      return (lhs->second < rhs->second);
+    }
+  };
+  
+  unordered_map<char, int> hm;
+  priority_queue<unordered_map<char, int>::iterator, vector<unordered_map<char, int>::iterator>, mycomp> pq;
+```
 
 ##Allocator
