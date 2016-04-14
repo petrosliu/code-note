@@ -11,9 +11,9 @@
       "copy-code-button",
       "github",
       "sitemap",
-      "mathjax",
+      "katex",
       "disqus",
-      "multipart"
+      "anchors-wrapper"
       ],
     "pluginsConfig": {
         "ga": {
