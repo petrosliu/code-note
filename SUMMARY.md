@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+## Part I - Algorithm
 * [Hash Table](Hash Table.md)
 * [Linked List](Linked List.md)
 * [Math](Math.md)
@@ -24,8 +25,9 @@
 * [Recursion](Recursion.md)
 * [Binary Indexed Tree](Binary Indexed Tree.md)
 * [Memoization](Memorization.md)
-* [Memory](Memory.md)
-* [Thread](Thread.md)
+## Part II - C++
 * [C++](C++.md)
 * [STL](STL.md)
+* [Memory](Memory.md)
+* [Thread](Thread.md)
 
