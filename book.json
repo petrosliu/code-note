@@ -11,9 +11,10 @@
       "copy-code-button",
       "github",
       "sitemap",
-      "katex",
+      "mathjax",
       "disqus",
-      "anchors-wrapper"
+      "code_tomorrow_scheme",
+      "infinitescroll"
       ],
     "pluginsConfig": {
         "ga": {
