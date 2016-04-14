@@ -12,9 +12,7 @@
       "github",
       "sitemap",
       "mathjax",
-      "disqus",
-      "code_tomorrow_scheme",
-      "infinitescroll"
+      "disqus"
       ],
     "pluginsConfig": {
         "ga": {

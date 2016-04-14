@@ -1,4 +1,4 @@
-# STL (Standard Template Library)
+# Standard Template Library (STL)
  ```c++
  using namespace std;
  ```

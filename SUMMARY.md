@@ -1,9 +1,17 @@
 # Summary
 
 * [Introduction](README.md)
-* Part I - Algorithms
+* Part I - Data Structure
  * [Hash Table](Hash Table.md)
  * [Linked List](Linked List.md)
+ * [Stack](Stack.md)
+ * [Queue](Queue.md)
+ * [Tree](Tree.md)
+ * [Graph](Graph.md)
+ * [Design](Design.md)
+ * [Trie](Trie.md)
+ * [Binary Indexed Tree](Binary Indexed Tree.md)
+* Part II - Algorithm
  * [Math](Math.md)
  * [Two Pointers](Two Pointers.md)
  * [String](String.md)
@@ -11,23 +19,16 @@
  * [Binary Search](Binary Search.md)
  * [Dynamic Programming](Dynamic Programming.md)
  * [Backtracking](Backtracking.md)
- * [Stack](Stack.md)
- * [Queue](Queue.md)
  * [Greedy](Greedy.md)
  * [Sort](Sort.md)
  * [Bit Manipulation](Bit Manipulation.md)
- * [Tree](Tree.md)
  * [Depth-first Search](Depth-first Search.md)
- * [Graph](Graph.md)
- * [Design](Design.md)
  * [Topological Sort](Topological Sort.md)
- * [Trie](Trie.md)
  * [Recursion](Recursion.md)
- * [Binary Indexed Tree](Binary Indexed Tree.md)
  * [Memoization](Memorization.md)
-* Part II - C++
+* Part III - C++
  * [C++](C++.md)
- * [STL](STL.md)
+ * [Standard Template Library](STL.md)
  * [Memory](Memory.md)
  * [Thread](Thread.md)
 
