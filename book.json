@@ -13,8 +13,7 @@
       "sitemap",
       "mathjax",
       "disqus",
-      "anchors",
-      "comscore"
+      "anchors"
       ],
     "pluginsConfig": {
         "ga": {
