@@ -46,7 +46,7 @@
   
   
 * Technical / Professional Knowledge
- * Sometimes complex projects require additional expertise. Describe a situation when you had to request help or assistance with one of your projects or assignments.   
+ * Sometimes complex projects require additional expertise. Describe a situation when you had to request help or assistance with one of your projects or assignments.
  * Describe how you've gone about learning a new technical skill. 
  * Describe a time when you solved a technical problem. 
   
