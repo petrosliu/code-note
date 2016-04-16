@@ -32,5 +32,5 @@
    * [Memory](Memory.md)
    * [Thread](Thread.md)
 * Part IV - Behavioral Questions
-   * Behavioral Questions
+   * [Behavioral Questions](Behavioral Questions.md)
 
