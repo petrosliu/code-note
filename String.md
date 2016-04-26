@@ -120,3 +120,35 @@ private:
     }
 };
 ```
+
+##Regular Expression Matching
+```c++
+class Solution {
+private:
+    bool isMatch(string &s, string &p, int ss, int ps) {
+        if(ss==-1){
+            if(ps==-1) return true;
+            if(p[ps]=='*') return isMatch(s,p,ss,ps-2);
+            return false;
+        }
+        
+        if(p[ps]=='*'){
+            if(isMatch(s,p,ss,ps-2)) return true;
+            int i=ss;
+            char c=p[ps-1];
+            while(i>=0&&(c=='.'||c==s[i])){
+                if(isMatch(s,p,i-1,ps-2)) return true;
+                i--;
+            }
+            return false;
+        }
+        
+        if(p[ps]=='.'||p[ps]==s[ss]) return isMatch(s,p,ss-1,ps-1);
+        return false;
+    }
+public:
+    bool isMatch(string &s, string &p){
+        return isMatch(s,p,s.size()-1,p.size()-1);
+    }
+};
+```
