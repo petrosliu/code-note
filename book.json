@@ -1,11 +1,6 @@
 {
     "title": "Code Note · Yiding Liu",
     "gitbook": ">=3.0.0-pre.0",
-    "links": {
-        "sidebar": {
-            "About Me": "http://im.liuyid.in/"
-        }
-    },
     "plugins": [
       "ga",
       "copy-code-button",
