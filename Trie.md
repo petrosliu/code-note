@@ -131,68 +131,63 @@ public:
 
 ##Word Search
 ```c++
-class Trie {
-private:
-    class TrieNode {
-    public:
-        TrieNode* next[26]; bool isEnd; string str;
-        TrieNode():isEnd(false){memset(next,0,26*sizeof(TrieNode*));}
-    };
+class Node{
 public:
-    TrieNode* root;
-    Trie():root(new TrieNode()){}
-    void insert(string &s) {
-        TrieNode* p=root;
-        for(int i=0;i<s.size();i++){
-            int idx=s[i]-'a';
-            if(!p->next[idx]) p->next[idx]=new TrieNode();
-            p=p->next[idx];
+    bool isEnd=false;
+    Node* next[26]={};
+    string word;
+    Node(bool b):isEnd(b){}
+};
+
+class Trie{
+public:
+    Node* root = new Node(false);
+    void add(string word){
+        Node* node=root;
+        for(auto c:word){
+            int idx=c-'a';
+            if(node->next[idx]==NULL) node->next[idx]=new Node(false);
+            node=node->next[idx];
         }
-        p->isEnd=true;
-        p->str=s;
-    }
-    bool search(string &s) {
-        TrieNode* p=root;
-        for(int i=0;i<s.size();i++){
-            int idx=s[i]-'a';
-            if(!p->next[idx])return false;
-            p=p->next[idx];
-        }
-        return p->isEnd;
-    }
-    
-    void search(vector<vector<char>>& board, const int &i, const int &j, const int &h, const int &w, vector<string> &ans, TrieNode* p){
-        int idx=board[i][j]-'a';
-        if(board[i][j]&&p->next[idx]){
-            TrieNode*&n=p->next[idx];
-            if(n->isEnd){ans.push_back(n->str);n->isEnd=false;}
-            board[i][j]=0;
-            if(i>0) search(board,i-1,j,h,w,ans,n);
-            if(i<h-1) search(board,i+1,j,h,w,ans,n);
-            if(j>0) search(board,i,j-1,h,w,ans,n);
-            if(j<w-1) search(board,i,j+1,h,w,ans,n);
-            board[i][j]=idx+'a';
-        }
+        node->isEnd=true;
+        node->word=word;
     }
 };
 
 class Solution {
+private:
+    int h,w;
+    void findWord(vector<vector<char>>& board, int i, int j, Node* node, vector<string> &ans){
+        int idx=board[i][j]-'a';
+        if(node->next[idx]!=NULL){
+            node=node->next[idx];
+            if(node->isEnd){
+                ans.push_back(node->word);
+                node->isEnd=false;
+            }
+            board[i][j]=0;
+            if(i>0   && board[i-1][j]!=0) findWord(board,i-1,j,node,ans);
+            if(i<h-1 && board[i+1][j]!=0) findWord(board,i+1,j,node,ans);
+            if(j>0   && board[i][j-1]!=0) findWord(board,i,j-1,node,ans);
+            if(j<w-1 && board[i][j+1]!=0) findWord(board,i,j+1,node,ans);
+            board[i][j]=idx+'a';
+        }
+    }
 public:
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
-        int l=words.size();
-        if(!l)return vector<string>();
-        int h=board.size();
-        if(!h)return vector<string>();
-        int w=board[0].size();
-        if(!w)return vector<string>();
-        
         vector<string> ans;
-        Trie dict;
-        for(int i=0;i<words.size();i++)dict.insert(words[i]);
+        h=board.size();
+        int l=words.size();
+        if(h==0||l==0) return ans;
+        w=board[0].size();
+        if(w==0) return ans;
         
+        Trie dict;
+        for(auto word:words) dict.add(word);
         for(int i=0;i<h;i++){
-            for(int j=0;j<w&&ans.size()<l;j++){
-                dict.search(board,i,j,h,w,ans,dict.root);
+            for(int j=0;j<w;j++){
+                findWord(board,i,j,dict.root,ans);
+                if(l==ans.size()) return ans;
             }
         }
         return ans;
