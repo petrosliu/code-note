@@ -38,3 +38,36 @@ public:
     }
 };
 ```
+
+##Find Median from Data Stream
+```c++
+class MedianFinder {
+private:
+    priority_queue<int, vector<int>, greater<int>> topheap;
+    priority_queue<int, vector<int>, less<int>> bottomheap;
+    
+    void balance(){
+        while(bottomheap.size()<topheap.size()){
+            bottomheap.push(topheap.top());
+            topheap.pop();
+        }
+        while(bottomheap.size()>topheap.size()+1){
+            topheap.push(bottomheap.top());
+            bottomheap.pop();
+        }
+    }
+    
+public:
+    void addNum(int num) {
+        if(bottomheap.size()==0||num<=bottomheap.top()) bottomheap.push(num);
+        else topheap.push(num);
+        balance();
+    }
+
+    double findMedian() {
+        if(bottomheap.size()==0) return 0;
+        if(bottomheap.size()==topheap.size()) return (double)(topheap.top()+bottomheap.top())/2;
+        return bottomheap.top();
+    }
+};
+```
