@@ -32,32 +32,6 @@ public:
 };
 ```
 
-##Longest Consecutive Sequence
-```c++
-class Solution {
-public:
-    int longestConsecutive(vector<int>& nums) {
-        unordered_map<int,bool> hash;
-        for(int i=0;i<nums.size();i++){
-            hash[nums[i]]=true;
-        }
-        int max=0;
-        for(int i=0;i<nums.size();i++){
-            int num=nums[i];
-            if(hash[num]){
-                hash[num]=false;
-                int left=num-1,right=num+1;
-                while(hash.find(left)!=hash.end()&&hash[left]){hash[left]=false;left--;}
-                while(hash.find(right)!=hash.end()&&hash[right]){hash[right]=false;right++;}
-                int l=right-left-1;
-                max=(l>max)?l:max;
-            }
-        }
-        return max;
-    }
-};
-```
-
 ##Max Points on a Line
 ```c++
 class Solution {
