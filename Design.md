@@ -102,3 +102,33 @@ public:
     }
 };
 ```
+
+##Flatten Nested List Iterator
+```c++
+class NestedIterator {
+private:
+    vector<pair<vector<NestedInteger>::iterator,vector<NestedInteger>::iterator>> stack;
+public:
+    NestedIterator(vector<NestedInteger> &nestedList) {
+        stack.push_back({nestedList.begin(),nestedList.end()});
+    }
+
+    int next() {
+        hasNext();
+        return (stack.back().first++)->getInteger();
+    }
+
+    bool hasNext() {
+        while(!stack.empty()){
+            if(stack.back().first==stack.back().second) stack.pop_back();
+            else if(!stack.back().first->isInteger()){
+                auto &next=stack.back().first->getList();
+                stack.back().first++;
+                stack.push_back({next.begin(),next.end()});
+            }
+            else return true;
+        }
+        return false;
+    }
+};
+```
