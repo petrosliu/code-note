@@ -150,3 +150,25 @@ public:
     }
 };
 ```
+
+##Word Break
+```c++
+class Solution {
+public:
+    bool wordBreak(string s, unordered_set<string>& wordDict) {
+        bool check[s.size()+1]={};
+        check[0]=true;
+        for(int i=1;i<=s.size();i++){
+            for(int j=i-1;j>=0;j--){
+                if(check[j]){
+                    if(wordDict.find(s.substr(j,i-j))!=wordDict.end()){
+                        check[i]=true;
+                        break;
+                    }
+                }
+            }
+        }
+        return check[s.size()];
+    }
+};
+```
