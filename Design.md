@@ -71,3 +71,34 @@ public:
     }
 };
 ```
+
+##Zigzag Iterator
+
+```c++
+class ZigzagIterator {
+private:
+    queue<pair<vector<int>::iterator,vector<int>::iterator>> Q;
+public:
+    ZigzagIterator(vector<int>& v1, vector<int>& v2) {
+        if(v1.size()){
+            Q.push({v1.begin(),v1.end()});
+        }
+        if(v2.size()){
+            Q.push({v2.begin(),v2.end()});
+        }
+    }
+
+    int next() {
+        auto it=Q.front();
+        if(it.first+1!=it.second){
+            Q.push({it.first+1,it.second});
+        }
+        Q.pop();
+        return *(it.first);
+    }
+
+    bool hasNext() {
+        return !Q.empty();
+    }
+};
+```
