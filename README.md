@@ -1,6 +1,6 @@
 [Code Note](http://codenote.liuyid.in/)
 =======
-####[About Me](http://im.liuyid.in/) · [Github](https://github.com/petrosliu/code-note)
+[About Me](http://im.liuyid.in/) · [Github](https://github.com/petrosliu/code-note) · [PDF](https://www.gitbook.com/download/pdf/book/petrosliu/code-note) · [ePub](https://www.gitbook.com/download/epub/book/petrosliu/code-note) · [Mobi](https://www.gitbook.com/download/mobi/book/petrosliu/code-note)
 
 This is a notebook for C++ coding interviews. Most solutions passed [LeetCode](https://leetcode.com/) OJ correctly and efficiently. Any correction is appreciated.
 
