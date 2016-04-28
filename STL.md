@@ -243,11 +243,14 @@ deque<T>::iterator it；
 
   sort (myvector.begin(), myvector.begin()+4);
   sort (myvector.begin()+4, myvector.end(), myfunction);
-  nth_element(myvector.begin(), myvector.begin()+4, myvector.end());
   min(1,2);
   max(1,2);
   *min_element(myints,myints+7);
   *max_element(myints,myints+7);
+  
+  nth_element(myvector.begin(), myvector.begin()+4, myvector.end());
+  next_permutation(myvector.begin(), myvector.end());
+  prev_permutation(myvector.begin(), myvector.end());
 
   vector<int> v={10,20,30,5,15};
   make_heap (v.begin(),v.end());

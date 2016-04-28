@@ -88,3 +88,26 @@ public:
     }
 };
 ```
+
+##Next Permutation
+```c++
+class Solution {
+public:
+    void nextPermutation(vector<int> &num) 
+    {
+        if (num.empty()) return;
+        int i,j;
+        for (i = num.size()-2; i >= 0; i--){
+            if (num[i] < num[i+1]) break;
+        }
+        reverse(num.begin()+i+1, num.end());
+        // if violated number not found
+        if (i == -1) return;
+        // else find the first number larger than the violated number
+        for (j = i+1; j < num.size(); j++){
+            if (num[i] < num[j]) break;
+        }
+        swap(num[i], num[j]);
+    }
+};
+```
