@@ -1,5 +1,35 @@
 # Binary Search
 
+##Median of Two Sorted Arrays
+```c++
+class Solution {
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int len1 = nums1.size(), len2 = nums2.size();
+        if (len1 > len2) return findMedianSortedArrays(nums2,nums1);
+        int L1, L2, R1, R2, m1, m2;
+        int lo = 0, hi = 2*len1;
+        while(lo <= hi) {
+            m1 = (lo + hi) / 2;
+            m2 = len1 + len2 - m1;
+            L1 = (m1 == 0)?      INT_MIN : nums1[(m1-1)/2];
+            R1 = (m1 == 2*len1)? INT_MAX : nums1[    m1/2];
+            L2 = (m2 == 0)?      INT_MIN : nums2[(m2-1)/2];
+            R2 = (m2 == 2*len2)? INT_MAX : nums2[    m2/2];
+            //     0 1 2 3       0 1 2 3 4 5 6 7 8
+            // 4: [1 4 7 9]  9: [# 1 # 4 # 7 # 9 #]
+            //       ^ ^         ^       ^       ^
+            // 3: [2 3 5]    7: [# 2 # 3 # 5 #]
+            //       ^                 ^
+            if(L1 > R2)      hi = m1-1;
+            else if(L2 > R1) lo = m1+1;
+            else break;
+        }
+        return (max(L1, L2) + min(R1, R2)) / 2.0;
+    }
+};
+```
+
 ##Find Minimum in Rotated Sorted Array
 ```c++
 class Solution {
