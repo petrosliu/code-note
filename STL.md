@@ -243,6 +243,7 @@ deque<T>::iterator it；
 
   sort (myvector.begin(), myvector.begin()+4);
   sort (myvector.begin()+4, myvector.end(), myfunction);
+  nth_element(myvector.begin(), myvector.begin()+4, myvector.end());
   min(1,2);
   max(1,2);
   *min_element(myints,myints+7);
