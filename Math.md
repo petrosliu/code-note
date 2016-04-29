@@ -111,3 +111,35 @@ public:
     }
 };
 ```
+
+##Fraction to Recurring Decimal
+```c++
+class Solution {
+private:
+    string fractionToDecimal(long numerator, long denominator) {
+        if(numerator==0) return "0";
+        if(denominator==0) return "INF";
+        if(numerator>0^denominator>0) return "-"+fractionToDecimal(abs(numerator),abs(denominator));
+        string ans=to_string(numerator/denominator);
+        numerator=(numerator%denominator)*10;
+        if(numerator==0) return ans;
+        ans+=".";
+        unordered_map<int,int> rest;
+        int len=ans.size();
+        while(numerator!=0 && rest.find(numerator)==rest.end()){
+            ans+=to_string(numerator/denominator);
+            rest[numerator]=len++;
+            numerator=(numerator%denominator)*10;
+        }
+        if(numerator!=0){
+            ans.insert(rest[numerator],"(");
+            ans+=")";
+        }
+        return ans;
+    }
+public:
+    string fractionToDecimal(int numerator, int denominator) {
+        return fractionToDecimal((long)numerator,(long)denominator);
+    }
+};
+```
