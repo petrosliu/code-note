@@ -172,3 +172,27 @@ public:
     }
 };
 ```
+
+## Word Break II
+```c++
+class Solution {
+private:
+    unordered_map<string,vector<string>> hm={{"",{}}};
+public:
+    vector<string> wordBreak(string s, unordered_set<string>& wordDict) {
+        if(hm.find(s)!=hm.end()) return hm[s];
+        vector<string> ans;
+        for(int i=0;i<s.size()-1;++i){
+            string left=s.substr(0,i+1);
+            if(wordDict.find(left)!=wordDict.end()){
+                for(auto& right:wordBreak(s.substr(i+1),wordDict)){
+                    ans.push_back(left+" "+right);
+                }
+            }
+        }
+        if(wordDict.find(s)!=wordDict.end()) ans.push_back(s);
+        hm[s]=ans;
+        return ans;
+    }
+};
+```
