@@ -56,28 +56,30 @@ public:
 ```c++
 class Solution {
 public:
-    bool isMatch(string s, string p) {
-        int m = s.length(), n = p.length();
-        int i = 0, j = 0, star = -1, match;
-        while (i < m) {
-            if (j < n && p[j] == '*') {
-                match = i;  
-                star = j;
-                j++;
+    bool isMatch(string &s, string &p) {
+        int s_len = s.size(), p_len = p.size();
+        int s_idx = 0, p_idx = 0;
+        int s_tmp = -1, p_tmp = -1;
+        while(s_idx < s_len) {
+            if(p_idx < p_len && (p[p_idx] == s[s_idx] || p[p_idx] == '?')){
+                p_idx++;
+                s_idx++;
             }
-            else if (j < n && (s[i] == p[j] || p[j] == '?')) {
-                i++;
-                j++;
+            else if(p_idx < p_len && p[p_idx] == '*'){
+                while(p_idx+1 < p_len && p[p_idx+1] == '*') p_idx++;
+                p_tmp = p_idx;
+                s_tmp = s_idx;
+                p_idx++;
             }
-            else if (star >= 0) {
-                match++;
-                i = match;
-                j = star + 1;
+            else if(p_tmp >= 0){
+                p_idx = p_tmp+1;
+                s_tmp++;
+                s_idx = s_tmp;
             }
             else return false;
         }
-        while (j < n && p[j] == '*') j++;
-        return j == n;
+        while(p_idx < p_len && p[p_idx] == '*') p_idx++;
+        return s_idx == s_len && p_idx == p_len;
     }
 };
 ```
