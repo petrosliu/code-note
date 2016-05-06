@@ -1,6 +1,5 @@
 {
     "title": "Code Note · Yiding Liu",
-    "gitbook": ">=3.0.0-pre.0",
     "plugins": [
       "ga",
       "copy-code-button",
