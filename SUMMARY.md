@@ -12,6 +12,7 @@
    * [Design](Design.md)
    * [Trie](Trie.md)
    * [Binary Indexed Tree](Binary Indexed Tree.md)
+   * [Binary Search Tree](Binary Search Tree.md)
 * Part II - Algorithm
    * [Math](Math.md)
    * [Two Pointers](Two Pointers.md)
