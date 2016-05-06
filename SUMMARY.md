@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * Part I - Data Structure
-   * [Hash Table](Hash Table.md)
+   * [Hash Table](Hash_Table.md)
    * [Set](Set.md)
    * [Linked List](Linked List.md)
    * [Stack](Stack.md)
