@@ -12,7 +12,7 @@
    * [Design](data-structure/design.md)
    * [Trie](data-structure/trie.md)
    * [Binary Indexed Tree](data-structure/binary-indexed-tree.md)
-   * [Binary Search Tree](data-structure/binary-indexed-tree.md)
+   * [Binary Search Tree](data-structure/binary-search-tree.md)
 * Part II - Algorithm
    * [Math](algorithm/math.md)
    * [Two Pointers](algorithm/two-pointers.md)
