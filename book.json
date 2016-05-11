@@ -1,6 +1,6 @@
 {
     "title": "Code Note · Yiding Liu",
-    "gitbook": "3.0.0-pre.14",
+    "gitbook": ">=3.0.0-pre.0",
     "root": "./docs",
     "plugins": [
       "ga",
