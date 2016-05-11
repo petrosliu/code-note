@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* Part I - Data Structure
+### Part I - Data Structure
    * [Hash Table](data-structure/hash-table.md)
    * [Set](data-structure/set.md)
    * [Linked List](data-structure/linked-list.md)
@@ -13,7 +13,7 @@
    * [Trie](data-structure/trie.md)
    * [Binary Indexed Tree](data-structure/binary-indexed-tree.md)
    * [Binary Search Tree](data-structure/binary-search-tree.md)
-* Part II - Algorithm
+### Part II - Algorithm
    * [Math](algorithm/math.md)
    * [Two Pointers](algorithm/two-pointers.md)
    * [String](algorithm/string.md)
@@ -28,10 +28,10 @@
    * [Topological Sort](algorithm/topological-sort.md)
    * [Recursion](algorithm/recursion.md)
    * [Memoization](algorithm/memorization.md)
-* Part III - C++
+### Part III - C++
    * [C++](cpp/cpp.md)
    * [Standard Template Library](cpp/stl.md)
    * [Memory](cpp/memory.md)
    * [Thread](cpp/thread.md)
-* Part IV - Behavioral Questions
+### Part IV - Behavioral Questions
    * [Behavioral Questions](behavioral-questions/behavioral-questions.md)
