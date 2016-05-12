@@ -1,6 +1,6 @@
-# Depth-first Search
+# [Depth-first Search](#depth-first-search)
 
-##Populating Next Right Pointers in Each Node
+## [Populating Next Right Pointers in Each Node](#populating-next-right-pointers-in-each-node)
 ```c++
 class Solution {
 private:
@@ -22,7 +22,7 @@ public:
 };
 ```
 
-##Remove Invalid Parentheses
+## [Remove Invalid Parentheses](#remove-invalid-parentheses)
 ```c++
 class Solution {
 public:
@@ -73,7 +73,7 @@ private:
 };
 ```
 
-##Binary Tree Maximum Path Sum
+## [Binary Tree Maximum Path Sum](#binary-tree-maximum-path-sum)
 ```c++
 class Solution {
 private:

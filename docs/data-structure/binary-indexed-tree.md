@@ -1,5 +1,5 @@
-# Binary Indexed Tree
-##Range Sum Query - Mutable
+# [Binary Indexed Tree](#binary-indexed-tree)
+## [Range Sum Query - Mutable](#range-sum-query---mutable)
 ```c++
 class NumArray {
 private :
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-##Range Sum Query 2D - Mutable
+## [Range Sum Query 2D - Mutable](#range-sum-query-2d---mutable)
 ```c++
 class NumMatrix {
 private:

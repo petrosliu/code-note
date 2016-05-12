@@ -1,6 +1,6 @@
-# Greedy
+# [Greedy](#greedy)
 
-##Patching Array
+## [Patching Array](#patching-array)
 ```c++
 class Solution {
 public:

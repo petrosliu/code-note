@@ -1,6 +1,6 @@
-# Set
-
-##Longest Consecutive Sequence
+# [Set](#set)
+	
+## [Longest Consecutive Sequence](#longest-consecutive-sequence)
 ```c++
 class Solution {
 public:

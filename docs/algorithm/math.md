@@ -1,6 +1,6 @@
-# Math
+# [Math](#math)
 
-##Divide Two Integers
+## [Divide Two Integers](#divide-two-integers)
 ```c++
 class Solution {
 public:
@@ -25,7 +25,7 @@ public:
 };
 ```
 
-##Self Crossing
+## [Self Crossing](#self-crossing)
 ```c++
 class Solution {
 public:
@@ -41,7 +41,7 @@ public:
 };
 ```
 
-##K Nearest Neighbor
+## [K Nearest Neighbor](#k-nearest-neighbor)
 ```c++
 class Solution {
 public:
@@ -65,7 +65,7 @@ public:
 };
 ```
 
-##Count Primes
+## [Count Primes](#count-primes)
 ```c++
 class Solution {
 public:
@@ -89,7 +89,7 @@ public:
 };
 ```
 
-##Next Permutation
+## [Next Permutation](#next-permutation)
 ```c++
 class Solution {
 public:
@@ -112,7 +112,7 @@ public:
 };
 ```
 
-##Fraction to Recurring Decimal
+## [Fraction to Recurring Decimal](#fraction-to-recurring-decimal)
 ```c++
 class Solution {
 private:

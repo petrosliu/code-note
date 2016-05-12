@@ -1,6 +1,6 @@
-# String
+# [String](#string)
 
-##Substring Problem Template
+## [Substring Problem Template](#substring-problem-template)
 ```c++
 int findSubstring(string s){
         int begin=0, end=0; //two pointers, one point to tail and one head
@@ -39,7 +39,7 @@ int findSubstring(string s){
   }
 ```
 
-##Rotation
+## [Rotation](#rotation)
 ```c++
 class Solution {
 public:
@@ -52,7 +52,7 @@ public:
 };
 ```
 
-##Wildcard Matching
+## [Wildcard Matching](#wildcard-matching)
 ```c++
 class Solution {
 public:
@@ -84,7 +84,7 @@ public:
 };
 ```
 
-##Serialize and Deserialize Binary Tree
+## [Serialize and Deserialize Binary Tree](#serialize-and-deserialize-binary-tree)
 **`ostringstream` and `istringstream`**
 
 ```c++
@@ -123,7 +123,7 @@ private:
 };
 ```
 
-##Regular Expression Matching
+## [Regular Expression Matching](#regular-expression-matching)
 ```c++
 class Solution {
 private:

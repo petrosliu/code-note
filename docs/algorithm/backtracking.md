@@ -1,6 +1,6 @@
-# Backtracking
+# [Backtracking](#backtracking)
 
-##N-Queens
+## [N-Queens](#n-queens)
 ```c++
 class Solution {
     int locateLTRD(int row,int col, int n){
@@ -45,7 +45,7 @@ public:
 };
 ```
 
-##Sudoku Solver
+## [Sudoku Solver](#sudoku-solver)
 ```c++
 class Solution {
 private:

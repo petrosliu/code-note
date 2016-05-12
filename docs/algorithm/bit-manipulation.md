@@ -1,6 +1,6 @@
-# Bit Manipulation
+# [Bit Manipulation](#bit-manipulation)
 
-##Repeated DNA Sequences
+## [Repeated DNA Sequences](#repeated-dna-sequences)
 ```c++
 #define ENCODE(i) ((i-'A'+1)%5)
 class Solution {
@@ -28,7 +28,7 @@ public:
 };
 ```
 
-##Gray Code
+## [Gray Code](#gray-code)
 ```c++
 class Solution {
 public:

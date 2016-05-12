@@ -1,5 +1,5 @@
-# Linked List
-##Reverse Linked List
+# [Linked List](#linked-list)
+## [Reverse Linked List](#reverse-linked-list)
 ```c++
 class Solution {
 public:
@@ -16,7 +16,7 @@ public:
 };
 ```
 
-##Reverse Nodes in k-Group
+## [Reverse Nodes in k-Group](#reverse-nodes-in-k-group)
 ```c++
 class Solution {
     bool check(ListNode* head, int k){

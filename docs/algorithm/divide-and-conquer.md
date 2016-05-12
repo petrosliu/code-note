@@ -1,6 +1,6 @@
-# Divide and Conquer
+# [Divide and Conquer](#divide-and-conquer)
 
-##Expression Add Operators
+## [Expression Add Operators](#expression-add-operators)
 ```c++
 class Solution {
 private:

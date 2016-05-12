@@ -1,6 +1,6 @@
-# Sort
+# [Sort](#sort)
 
-##Bucket Sort Maximum Gap
+## [Bucket Sort Maximum Gap](#bucket-sort-maximum-gap)
 ```c++
 class Solution {
 public:
@@ -41,7 +41,7 @@ public:
 };
 ```
 
-##Insert Interval
+## [Insert Interval](#insert-interval)
 ```c++
 Solution {
 public:

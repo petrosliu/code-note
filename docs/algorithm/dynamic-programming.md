@@ -1,6 +1,6 @@
-# Dynamic Programming
+# [Dynamic Programming](#dynamic-programming)
 
-##Burst Balloons
+## [Burst Balloons](#burst-balloons)
 ```c++
 class Solution {
 public:
@@ -26,7 +26,7 @@ public:
 };
 ```
 
-##Dungeon Game
+## [Dungeon Game](#dungeon-game)
 ```c++
 #define entry(a,b) (a==0?b:(a>=b?1:b-a))
 class Solution {
@@ -55,7 +55,7 @@ public:
 };
 ```
 
-##Distinct Subsequences
+## [Distinct Subsequences](#distinct-subsequences)
 ```c++
 class Solution {
 public:
@@ -78,7 +78,7 @@ public:
 };
 ```
 
-##Maximum Subarray
+## [Maximum Subarray](#maximum-subarray)
 ```c++
 class Solution {
 public:
@@ -95,7 +95,7 @@ public:
 };
 ```
 
-##Length of Longest Arithmetic Sequence
+## [Length of Longest Arithmetic Sequence](#length-of-longest-arithmetic-sequence)
 ```c++
 class Solution {
 public:
@@ -131,7 +131,7 @@ public:
 };
 ```
 
-##Perfect Squares
+## [Perfect Squares](#perfect-squares)
 **Static Dynamic Programming**
 ```c++
 class Solution {
@@ -151,7 +151,7 @@ public:
 };
 ```
 
-##Word Break
+## [Word Break](#word-break)
 ```c++
 class Solution {
 public:
@@ -173,7 +173,7 @@ public:
 };
 ```
 
-## Word Break II
+## [Word Break II](#word-break-ii)
 ```c++
 class Solution {
 private:

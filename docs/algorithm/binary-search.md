@@ -1,6 +1,6 @@
-# Binary Search
+# [Binary Search](#binary-search)
 
-##Median of Two Sorted Arrays
+## [Median of Two Sorted Arrays](#median-of-two-sorted-arrays)
 ```c++
 class Solution {
 public:
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-##Find Minimum in Rotated Sorted Array
+## [Find Minimum in Rotated Sorted Array](#find-minimum-in-rotated-sorted-array)
 ```c++
 class Solution {
 public:
@@ -53,7 +53,7 @@ public:
 };
 ```
 
-##Search in Rotated Sorted Array
+## [Search in Rotated Sorted Array](#search-in-rotated-sorted-array)
 ```c++
 class Solution {
 public:
@@ -79,7 +79,7 @@ public:
 };
 ```
 
-##Search in Rotated Sorted Array II
+## [Search in Rotated Sorted Array II](#search-in-rotated-sorted-array-ii)
 *Duplicates are allowed.*
 
 ```c++

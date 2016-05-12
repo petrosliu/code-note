@@ -1,6 +1,6 @@
-# Binary Search Tree
+# [Binary Search Tree](#binary-search-tree)
 
-##Count of Smaller Numbers After Self
+## [Count of Smaller Numbers After Self](#count-of-smaller-numbers-after-self)
 ```c++
 class Node{
 public:
@@ -45,4 +45,3 @@ public:
     }
 };
 ```
-

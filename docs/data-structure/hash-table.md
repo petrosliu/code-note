@@ -1,6 +1,6 @@
-#Hash Table
+# [Hash Table](#hash-table)
 
-##Copy List with Random Pointer
+## [Copy List with Random Pointer](#copy-list-with-random-pointer)
 ```c++
 class Solution {
 public:
@@ -32,7 +32,7 @@ public:
 };
 ```
 
-##Max Points on a Line
+## [Max Points on a Line](#max-points-on-a-line)
 ```c++
 class Solution {
 public:

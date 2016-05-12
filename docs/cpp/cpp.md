@@ -1,6 +1,6 @@
-# C++
+# [C++](#c)
 
-##Data type
+## [Data type](#data-type)
 |Type|Typical Bit Width|Typical Range|
 | -- | -- | -- |
 |char|1 byte|-127 to 127 or 0 to 255|
@@ -20,7 +20,7 @@
 |long double|8 bytes|+/- 1.7e +/- 308 (~15 digits)|
 |wchar_t|2 or 4 bytes|1 wide character|
 |pointer|4 or 8 bytes| - |
-##Operators Precedence
+## [Operators Precedence](#operators-precedence)
 | Category | Operator | Associativity  | 
 | -- | -- | -- |
 | Postfix | () [] -> . ++ - -  | Left to right  | 
@@ -39,8 +39,8 @@
 | Assignment | = += -= *= /= %=>>= <<= &= ^= &#124;= | Right to left  | 
 | Comma | , | Left to right  | 
 
-##Classes
-###Inheritance
+## [Classes](#classes)
+### [Inheritance](#inheritance)
 When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the **base** class, and the new class is referred to as the **derived** class.
 
 Exceptions:
@@ -74,14 +74,14 @@ class Derived : public Base {
 };
 ```
 
-####Diamond Problem
+#### [Diamond Problem](#diamond-problem)
 ```c++
 class Tiger : virtual public Animal { /* ... */ };
 class Lion : virtual public Animal { /* ... */ }			
 class Liger : public Tiger, public Lion { /* ... */ };	
 ```
 
-###Overloading
+### [Overloading](#overloading)
 
 |Expression | As member function | As non-member function | Example|
 | - | - | - | -|
@@ -112,24 +112,24 @@ struct X {
 };
 ```
 
-###Polymorphism
+### [Polymorphism](#polymorphism)
 C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.
 
-####Virtual function
-####Pure virtual function
+#### [Virtual function](#virtual-function)
+#### [Pure virtual function](#pure-virtual-function)
 `virtual int area() = 0;`
 
-###Abstraction
+### [Abstraction](#abstraction)
 **data abstraction** is a mechanism of exposing only the interfaces and hiding the implementation details from the user.
-###Encapsulation
+### [Encapsulation](#encapsulation)
 **Data encapsulation** is a mechanism of bundling the data, and the functions that use them.
 
-###Interfaces
+### [Interfaces](#interfaces)
 The C++ interfaces are implemented using **abstract classes** and these abstract classes should not be confused with data abstraction which is a concept of keeping implementation details separate from associated data.
 
 A class is made abstract by declaring at least one of its functions as **pure virtual function**. A pure virtual function is specified by placing `= 0` in its declaration
 
-##Template
+## [Template](#template)
 ```c++
 template <typename T>
 inline T const& Max (T const& a, T const& b) { 

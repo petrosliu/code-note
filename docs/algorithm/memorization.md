@@ -1,6 +1,6 @@
-# Memoization
+# [Memoization](#memoization)
 
-##Longest Increasing Path in a Matrix
+## [Longest Increasing Path in a Matrix](#longest-increasing-path-in-a-matrix)
 ```c++
 Solution {
     int longestIncreasingPath(vector<vector<int>>& matrix,int i, int j, int length[]){

@@ -1,6 +1,6 @@
-# Trie
+# [Trie](#trie)
 
-##Implement Trie
+## [Implement Trie](#implement-trie)
 ```c++
 class Trie {
 private:
@@ -33,7 +33,7 @@ public:
 };
 ```
 
-##Word Ladder
+## [Word Ladder](#word-ladder)
 ```c++
 typedef vector<string> Parents;
 typedef unordered_map<string,Parents> Layer;
@@ -129,7 +129,7 @@ public:
 };
 ```
 
-##Word Search
+## [Word Search](#word-search)
 ```c++
 class Node{
 public:

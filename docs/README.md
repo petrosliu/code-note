@@ -1,4 +1,4 @@
-[Code Note](http://codenote.liuyid.in/)
+# [Code Note](#code-note)
 =======
 [![github](https://img.shields.io/badge/About Me-GitHub-BBBBBB.svg)](https://github.com/petrosliu/code-note)
 [![license](https://img.shields.io/badge/License-CC0-808080.svg)](http://creativecommons.org/publicdomain/zero/1.0/)

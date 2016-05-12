@@ -1,6 +1,6 @@
-# Recursion
+# [Recursion](#recursion)
 
-##Scramble String
+## [Scramble String](#scramble-string)
 ```c++
 class Solution {
 public:

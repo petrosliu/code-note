@@ -1,5 +1,5 @@
-# Two Pointers
-##Linked List Cycle
+# [Two Pointers](#two-pointers)
+## [Linked List Cycle](#linked-list-cycle)
 1. $$slow=l+k+n_1r$$
 
  $$fast=l+k+n_2r=2l+2k+2n_1r$$
@@ -31,7 +31,7 @@ public:
 ```
 
 
-##Find the Duplicate Number
+## [Find the Duplicate Number](#find-the-duplicate-number)
 
 1. 
 Suppose there is $$m$$ steps from $$num[0]$$ to entry point, and the length of circle is $$n$$ steps.
@@ -71,7 +71,7 @@ public:
 };
 ```
 
-##Trapping Rain Water
+## [Trapping Rain Water](#trapping-rain-water)
 ```c++
 class Solution {
 public:
@@ -102,7 +102,7 @@ public:
 };
 ```
 
-##4Sum
+## [4Sum](#4sum)
 ```c++
 class Solution {
 public:
@@ -141,7 +141,7 @@ public:
 };
 ```
 
-##Container With Most Water
+## [Container With Most Water](#container-with-most-water)
 ```c++
 class Solution {
 public:
@@ -160,7 +160,7 @@ public:
 };
 ```
 
-##Minimum Size Subarray Sum
+## [Minimum Size Subarray Sum](#minimum-size-subarray-sum)
 ```c++
 class Solution {
 public:

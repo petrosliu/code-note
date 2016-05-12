@@ -1,6 +1,6 @@
-# Queue
+# [Queue](#queue)
 
-##Sliding Window Maximum
+## [Sliding Window Maximum](#sliding-window-maximum)
 ***Monotonic Queue***
 ```c++
 class Solution {
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-## The Skyline Problem
+## [The Skyline Problem](#the-skyline-problem)
 **Multimap and Multiset**
 ```c++
 class Solution {

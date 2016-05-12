@@ -1,11 +1,11 @@
-# Standard Template Library (STL)
+# [Standard Template Library (STL)](#standard-template-library-stl)
  ```c++
  using namespace std;
  ```
-##Container
+## [Container](#container)
 
-###Sequence containers
-####vector
+### [Sequence containers](#sequence-containers)
+#### [vector](#vector)
 ```c++
   #include <vector>
   vector<int> myvector = {10,20,30};
@@ -32,7 +32,7 @@
   auto it = myvector.end();
 ```
 
-####deque
+#### [deque](#deque)
 ```c++
   #include <deque>
   // constructors used in the same order as described above:
@@ -59,7 +59,7 @@
   it = mydeque.begin();
   it = mydeque.end();
 ```
-####list
+#### [list](#list)
 ```c++
   #include <list>
   // constructors used in the same order as described above:
@@ -96,7 +96,7 @@
   mylist.reverse();
 ```
 
-####String (is not a container)
+#### [String (is not a container)](#string-is-not-a-container)
 ```c++
   #include <string>
   string s0 ("Initial string");
@@ -152,9 +152,9 @@
   string str2 = str.substr (3,5);
 ```
 
-###Associated containers
+### [Associated containers](#associated-containers)
 
-####set/unordered_set
+#### [set/unordered_set](#setunordered_set)
 ```c++
   #include <set>
   struct classcomp {
@@ -185,7 +185,7 @@
   myset.erase ( myset.find("Japan"), myset.end() ); // erasing by range, unstable in unordered_set
 ```
 
-####map/unordered_map
+#### [map/unordered_map](#mapunordered_map)
 ```c++
   #include <map>
   struct classcomp {
@@ -221,7 +221,7 @@
   mymap.erase ( mymap.find("China"), mymap.end() ); // erasing by range, unstable in unordered_map
 ```
 
-##Iterator
+## [Iterator](#iterator)
 ```c++
 vector<T>::iterator it;
 list<T>::iterator it;
@@ -229,7 +229,7 @@ deque<T>::iterator it；
 ```
 `*`, `++`, `==`, `!=`, `=`
 
-##Algorithm
+## [Algorithm](#algorithm)
 ```c++
   #include <algorithm>
 
@@ -261,7 +261,7 @@ deque<T>::iterator it；
   sort_heap (v.begin(),v.end()); // for output
 ```
 
-##Function object
+## [Function object](#function-object)
 ```c++
   equal_to<int>()
   greater<int>()
@@ -269,9 +269,9 @@ deque<T>::iterator it；
   less<int>()
   less_equal<int>()
 ```
-##Adaptor
+## [Adaptor](#adaptor)
 
-###stack
+### [stack](#stack)
 ```c++
   #include <stack>
   stack<int> first; // deque is default container
@@ -284,7 +284,7 @@ deque<T>::iterator it；
   mystack.pop();
 ```
 
-###queue
+### [queue](#queue)
 ```c++
   #include <queue>
   std::queue<int> first; // deque is default container
@@ -296,7 +296,7 @@ deque<T>::iterator it；
   myqueue.push(5);
   myqueue.pop();
 ```
-###priority queue
+### [priority queue](#priority-queue)
 ```c++
   #include <queue>
   priority_queue<int> first; // vector is default containter
@@ -324,4 +324,4 @@ key-value priority queue
   priority_queue<unordered_map<char, int>::iterator, vector<unordered_map<char, int>::iterator>, mycomp> pq;
 ```
 
-##Allocator
+## [Allocator](#allocator)

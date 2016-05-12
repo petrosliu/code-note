@@ -1,6 +1,6 @@
-# Graph
+# [Graph](#graph)
 
-##Reconstruct Itinerary
+## [Reconstruct Itinerary](#reconstruct-itinerary)
 ```c++
 class Solution {
 private:

@@ -1,9 +1,9 @@
-# Memory
+# [Memory](#memory)
 
 * **The stack**: All variables declared inside the function will take up memory from the stack.
 * **The heap**: This is unused memory of the program and can be used to allocate the memory dynamically when program runs.
 
-##Aligned Malloc
+## [Aligned Malloc](#aligned-malloc)
 ```c++
 #include <cstdlib>
 void *aligned_malloc(size_t bytes, size_t alignment) {

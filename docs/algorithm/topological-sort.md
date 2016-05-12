@@ -1,6 +1,6 @@
-# Topological Sort
+# [Topological Sort](#topological-sort)
 
-##Longest Increasing Path in a Matrix
+## [Longest Increasing Path in a Matrix](#longest-increasing-path-in-a-matrix)
 ```c++
 class Solution {
     int longestIncreasingPath(vector<vector<int>>& matrix,int i, int j, vector<vector<int>> &length){
@@ -29,7 +29,7 @@ public:
 };
 ```
 
-##Course Schedule
+## [Course Schedule](#course-schedule)
 ```c++
 class Solution {
 private:

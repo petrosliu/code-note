@@ -1,6 +1,6 @@
-# Tree
+# [Tree](#tree)
 
-##Pre Order Traverse
+## [Pre Order Traverse](#pre-order-traverse)
 ```c++
 class Solution {
 public:
@@ -22,7 +22,7 @@ public:
 };
 ```
 
-##In Order Traverse
+## [In Order Traverse](#in-order-traverse)
 ```c++
 class Solution {
 public:
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-##Post Order Traverse
+## [Post Order Traverse](#post-order-traverse)
 ```c++
 class Solution {
 public:

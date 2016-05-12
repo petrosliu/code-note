@@ -1,6 +1,6 @@
-# Stack
+# [Stack](#stack)
 
-##Basic Calculator
+## [Basic Calculator](#basic-calculator)
 ```c++
 class Solution {
 public:

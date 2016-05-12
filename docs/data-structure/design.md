@@ -1,6 +1,6 @@
-# Design
+# [Design](#design)
 
-##LRU Cache
+## [LRU Cache](#lru-cache)
 ```c++
 class LRUCache{
 private:
@@ -39,7 +39,7 @@ public:
 };
 ```
 
-##Find Median from Data Stream
+## [Find Median from Data Stream](#find-median-from-data-stream)
 ```c++
 class MedianFinder {
 private:
@@ -72,7 +72,7 @@ public:
 };
 ```
 
-##Zigzag Iterator
+## [Zigzag Iterator](#zigzag-iterator)
 
 ```c++
 class ZigzagIterator {
@@ -103,7 +103,7 @@ public:
 };
 ```
 
-##Flatten Nested List Iterator
+## [Flatten Nested List Iterator](#flatten-nested-list-iterator)
 ```c++
 class NestedIterator {
 private:
