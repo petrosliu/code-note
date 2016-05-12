@@ -1,5 +1,5 @@
 # [Code Note](#code-note)
-=======
+
 [![github](https://img.shields.io/badge/About Me-GitHub-BBBBBB.svg)](https://github.com/petrosliu/code-note)
 [![license](https://img.shields.io/badge/License-CC0-808080.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![pdf](https://img.shields.io/badge/PDF-↓-F7221F.svg)](https://www.gitbook.com/download/pdf/book/petrosliu/code-note)
