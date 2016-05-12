@@ -3,20 +3,12 @@
     "gitbook": ">=3.0.0-pre.0",
     "root": "./docs",
     "plugins": [
-      "ga",
       "copy-code-button",
-      "github",
       "sitemap",
       "mathjax",
       "disqus"
       ],
     "pluginsConfig": {
-        "ga": {
-            "token": "UA-71764085-1"
-        },
-        "github": {
-            "url": "https://github.com/petrosliu/code-note"
-        },
         "sitemap": {
             "hostname": "http://codenote.liuyid.in/"
         },
