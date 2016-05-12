@@ -154,7 +154,7 @@
 
 ### [Associated containers](#associated-containers)
 
-#### [set/unordered_set](#setunordered_set)
+#### [set/unordered_set](#setunorderedset)
 ```c++
   #include <set>
   struct classcomp {
@@ -185,7 +185,7 @@
   myset.erase ( myset.find("Japan"), myset.end() ); // erasing by range, unstable in unordered_set
 ```
 
-#### [map/unordered_map](#mapunordered_map)
+#### [map/unordered_map](#mapunorderedmap)
 ```c++
   #include <map>
   struct classcomp {
