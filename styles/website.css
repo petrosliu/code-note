@@ -37,18 +37,3 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
 .js-toolbar-action > .fa-twitter {
     visibility: hidden;
 }
-
-body {
-    animation-name: fadeIn !important;
-    -webkit-animation-name: fadeIn !important;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
