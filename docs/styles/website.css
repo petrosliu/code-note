@@ -8,3 +8,19 @@ button.copy-code-button {
     color: black !important;
     border: 1px solid black !important;
 }
+
+#disqus_thread {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
