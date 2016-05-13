@@ -39,15 +39,16 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
 }
 
 .page-inner {
-    animation-name: fadeIn !important;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
-  to {
-    opacity: 1;
-  }
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
