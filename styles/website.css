@@ -1,5 +1,11 @@
 li.header {
     text-align: center;
+    font-weight: bold;
+}
+li.chapter:hover,
+li.chapter:active {
+    text-decoration: none;
+    background-color: #F7F7F7;
 }
 
 button.copy-code-button {
