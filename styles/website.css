@@ -38,9 +38,9 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     visibility: hidden;
 }
 
-.page-inner {
-    animation-name: fadeIn;
-    -webkit-animation-name: fadeIn;
+body {
+    animation-name: fadeIn !important;
+    -webkit-animation-name: fadeIn !important;
 }
 
 @keyframes fadeIn {
