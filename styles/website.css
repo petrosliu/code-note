@@ -1,13 +1,3 @@
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 li.header {
     text-align: center;
 }
@@ -20,9 +10,4 @@ button.copy-code-button {
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
-}
-
-.search-noresults,
-#disqus_thread {
-    animation-name: fadeIn;
 }
