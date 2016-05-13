@@ -2,6 +2,7 @@ li.header {
     text-align: center;
     font-weight: bold;
 }
+
 li.chapter:hover,
 li.chapter.active {
     background-color: #F0F0F0;
@@ -35,4 +36,18 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
 .js-toolbar-action > .fa-facebook,
 .js-toolbar-action > .fa-twitter {
     visibility: hidden;
+}
+
+.page-inner {
+    animation-name: fadeIn !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
