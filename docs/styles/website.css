@@ -22,6 +22,7 @@ button.copy-code-button {
     border-bottom-left-radius: 0px !important;
 }
 
-.page-inner {
+.search-noresults,
+#disqus_thread {
     animation-name: fadeIn;
 }
