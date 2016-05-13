@@ -1,26 +1,27 @@
-/* CSS for website */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 li.header {
     text-align: center;
 }
 
 button.copy-code-button {
     background-color: transparent !important;
-    color: black !important;
-    border: 1px solid black !important;
+    color: #333 !important;
+    border: 1px solid #333 !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
 }
 
-#disqus_thread {
-    animation-name: fadeInUp;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
+.page-inner {
+    animation-name: fadeIn;
 }
