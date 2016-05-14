@@ -44,7 +44,7 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     position: -ms-sticky !important;
     position: -o-sticky !important;
     position: sticky !important;
-    top: 0;
+    top: 0 !important;
     background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
     background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
     background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
@@ -57,6 +57,6 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     position: -ms-sticky !important;
     position: -o-sticky !important;
     position: sticky !important;
-    top: 0;
+    top: 0 !important;
     z-index: 2;
 }
