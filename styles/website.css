@@ -37,3 +37,16 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
 .js-toolbar-action > .fa-twitter {
     visibility: hidden;
 }
+
+.book-header {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0;
+    background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+}
