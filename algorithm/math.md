@@ -143,3 +143,27 @@ public:
     }
 };
 ```
+
+
+# [Pow(x, n)](#powx-n)
+```c++
+class Solution {
+    double myPow(double x, long n) {
+        if(x==1) return 1;
+        if(x==-1) return (n&1)?-1:1;
+        if(n<0) return myPow(1.0/x,(long)(-n));
+        vector<double> slots;
+        while(n){
+            if(n&1) slots.push_back(x);
+            x*=x; n>>=1;
+        }
+        double ans=1;
+        for(auto slot:slots) ans*=slot;
+        return ans;
+    }
+public:
+    double myPow(double x, int n) {
+        return myPow(x,(long)n);
+    }
+};
+```
