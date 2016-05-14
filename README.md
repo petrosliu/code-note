@@ -1,4 +1,4 @@
-# [Code Note](#code-note)
+# [Code Note](http://codenote.liuyid.in/)
 
 [![license](http://codenote.liuyid.in/images/badges/CC0.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![pdf](http://codenote.liuyid.in/images/badges/PDF.svg)](https://www.gitbook.com/download/pdf/book/petrosliu/code-note)
