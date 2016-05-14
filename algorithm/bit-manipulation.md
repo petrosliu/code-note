@@ -48,7 +48,7 @@ public:
 };
 ```
 
-# [Maximum Product of Word Lengths](#maximum-product-of-word-lengths)
+## [Maximum Product of Word Lengths](#maximum-product-of-word-lengths)
 ```c++
 class Solution {
 public:

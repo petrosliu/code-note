@@ -145,7 +145,7 @@ public:
 ```
 
 
-# [Pow(x, n)](#powx-n)
+## [Pow(x, n)](#powx-n)
 ```c++
 class Solution {
     double myPow(double x, long n) {
