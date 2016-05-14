@@ -43,54 +43,27 @@ public:
 
 ## [Insert Interval](#insert-interval)
 ```c++
-Solution {
+class Solution {
 public:
     vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
-        if(!intervals.size())return vector<Interval>(1,newInterval);
-        int s=newInterval.start;
-        int e=newInterval.end;
-        if(intervals[0].start>e){
-            vector<Interval> a(intervals);
-            a.insert(a.begin(),newInterval);
-            return a;
+        int i=0,l=0,r=intervals.size()-1;
+        while(l<=r){
+            i=(l+r)/2;
+            if(intervals[i].end<newInterval.start) l=i+1;
+            else r=i-1;
         }
-        if(intervals.back().end<s){
-            vector<Interval> a(intervals);
-            a.push_back(newInterval);
-            return a;
-        }
-        
-        vector<Interval>::iterator iteb=intervals.begin(),left,right;
-        if(intervals[0].end>=s)left=iteb;
-        else{
-            int l=0,r=intervals.size()-1;
-            while(l+1<r){
-                int m=(l+r)/2;
-                if((iteb+m)->end<s)l=m;
-                else r=m;
+        i=l;
+        while(i<intervals.size()){
+            if(intervals[i].start>newInterval.end){
+                intervals.insert(intervals.begin()+i,newInterval);
+                break;
             }
-            left=iteb+r;
+            newInterval.start=min(intervals[i].start, newInterval.start);
+            newInterval.end=max(intervals[i].end, newInterval.end);
+            intervals.erase(intervals.begin()+i);
         }
-        if(intervals.back().start<=e)right=intervals.end()-1;
-        else{
-            int l=0,r=intervals.size()-1;
-            while(l+1<r){
-                int m=(l+r)/2;
-                if((iteb+m)->start>e)r=m;
-                else l=m;
-            }
-            right=iteb+l;
-        }
-        
-        vector<Interval> a(iteb,left);
-        if(right==left-1)a.push_back(newInterval);
-        else{
-            s=min(s,left->start);
-            e=max(e,right->end);
-            a.push_back(Interval(s,e));
-        }
-        copy(right+1,intervals.end(),back_inserter(a));
-        return a;
+        if(i==intervals.size()) intervals.push_back(newInterval);
+        return intervals;
     }
 };
 ```
