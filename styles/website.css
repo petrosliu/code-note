@@ -62,10 +62,19 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
 }
 
 .book-header:hover {
-    background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
-    background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
-    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+    background: -webkit-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2ffffff', endColorstr='#00ffffff',GradientType=0 );
+}
+
+h2 {
+    position: -webkit-sticky !important;
+    position: -moz-sticky !important;
+    position: -ms-sticky !important;
+    position: -o-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
 }
 
 #book-search-input {
