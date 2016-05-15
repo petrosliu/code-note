@@ -3,44 +3,42 @@
 ## [Count of Smaller Numbers After Self](#count-of-smaller-numbers-after-self)
 ```c++
 class Node{
-public:
-    int index, lessorequal=1;
-    Node *left=NULL,*right=NULL;
-    Node(int i):index(i){}
+    public:
+        int val, cleft=0, cself=1;
+        Node *left=NULL, *right=NULL;
+        Node(int i):val(i){};
 };
-
 class Solution {
 private:
-    Node* root=NULL;
-    inline void insert(vector<int> &nums, int i, vector<int> &ans){
-        if(!root){root=new Node(i);return;}
-        Node* nd=root;
+    void insert(Node* root, int i, vector<int>& nums, vector<int>& ans){
+        Node* node=root;
         int n=nums[i];
         while(1){
-            if(n<=nums[nd->index]){
-                nd->lessorequal++;
-                if(!nd->left){
-                    nd->left=new Node(i);
-                    break;
-                }
-                nd=nd->left;
+            if(n < node->val){
+                node->cleft++;
+                if(!node->left) {node->left=new Node(n); break;}
+                node=node->left;
+            }
+            else if(n > node->val){
+                ans[i] += node->cleft + node->cself;
+                if(!node->right) {node->right=new Node(n); break;}
+                node=node->right;
             }
             else{
-                ans[i]+=nd->lessorequal;
-                if(!nd->right){
-                    nd->right=new Node(i);
-                    break;
-                }
-                nd=nd->right;
+                ans[i] += node->cleft;
+                node->cself++;
+                break;
             }
         }
     }
 public:
     vector<int> countSmaller(vector<int>& nums) {
         int len=nums.size();
-        if(len==0) return vector<int>();
+        if(len==0) return {};
+        if(len==1) return {0};
         vector<int> ans(len,0);
-        for(int i=len-1;i>=0;i--) insert(nums,i,ans);
+        Node* root=new Node(nums.back());
+        for(int i=len-2;i>=0;--i) insert(root,i,nums,ans);
         return ans;
     }
 };
