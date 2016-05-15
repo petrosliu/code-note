@@ -68,3 +68,41 @@ public:
     }
 };
 ```
+
+# [Alien Dictionary](#alien-dictionary)
+```c++
+class Solution {
+private:
+    bool dfs(unordered_map<char,unordered_set<char>>& hm, char c, string& ans, unordered_map<char,bool>& pending){
+        for(auto n:hm[c]){
+            if(hm.find(n)==hm.end()) continue;
+            if(pending[n]){
+                ans="";
+                return false;
+            }
+            else{
+                pending[n]=true;
+                if(!dfs(hm, n, ans, pending)) return false;
+            }
+        }
+        ans.push_back(c);
+        hm.erase(c);
+        return true;
+    }
+public:
+    string alienOrder(vector<string>& words) {
+        unordered_map<char,unordered_set<char>> hm;
+        for(auto w:words)for(auto c:w) hm[c]={};
+        for(int i=0;i<words.size()-1;i++){
+            int j=0;
+            while(j<words[i].size() && j<words[i+1].size() && words[i][j]==words[i+1][j]) j++;
+            if(j<words[i].size() && j<words[i+1].size()) hm[words[i][j]].insert(words[i+1][j]);
+        }
+        string ans;
+        unordered_map<char,bool> pending;
+        while(hm.size() && dfs(hm, hm.begin()->first, ans, pending));
+        reverse(ans.begin(),ans.end());
+        return ans;
+    }
+};
+```
