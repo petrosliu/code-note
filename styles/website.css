@@ -22,7 +22,7 @@ li.divider {
     position: sticky !important;
     top: 40px !important;
     z-index: 2 !important;
-    background-color: #fafafa;
+    background-color: #fafafa !important;
 }
 
 li.chapter:hover,
