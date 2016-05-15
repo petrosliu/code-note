@@ -15,7 +15,14 @@ li.header {
 }
 
 li.divider {
+    position: -webkit-sticky !important;
+    position: -moz-sticky !important;
+    position: -ms-sticky !important;
+    position: -o-sticky !important;
+    position: sticky !important;
+    top: 40px !important;
     z-index: 2 !important;
+    background-color: #fafafa;
 }
 
 li.chapter:hover,
