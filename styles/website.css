@@ -50,7 +50,7 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     position: -o-sticky !important;
     position: sticky !important;
     top: 0 !important;
-    z-index: 2 !important;
+    z-index: 3 !important;
     -webkit-transition: background ease .4s;
     -moz-transition: background ease .4s;
     -o-transition: background ease .4s;
@@ -76,10 +76,7 @@ h2 {
     position: sticky !important;
     top: 0 !important;
     z-index: 2 !important;
-    background: -webkit-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
-    background: -o-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
-    background: linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2ffffff', endColorstr='#00ffffff',GradientType=0 );
+    background: white;
 }
 
 #book-search-input {
