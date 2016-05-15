@@ -6,8 +6,7 @@
       "sitemap",
       "mathjax",
       "disqus",
-      "prism",
-      "-highlight"
+      "scripts"
       ],
     "pluginsConfig": {
         "sitemap": {
@@ -15,6 +14,11 @@
         },
         "disqus": {
             "shortName": "yidingliu"
+        },
+        "scripts": {
+            "files": [
+                "scripts/ga.js"
+            ]
         }
     }
 }
