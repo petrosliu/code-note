@@ -14,6 +14,10 @@ li.header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#00fafafa',GradientType=0 );
 }
 
+li.divider {
+    z-index: 2 !important;
+}
+
 li.chapter:hover,
 li.chapter.active {
     background-color: #F0F0F0;

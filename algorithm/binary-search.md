@@ -109,3 +109,21 @@ public:
     }
 };
 ```
+
+## [Search a 2D Matrix II](#search-a-2d-matrix-ii)
+```c++
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int h=matrix.size();    if(h==0) return false;
+        int w=matrix[0].size(); if(w==0) return false;
+        int i=0, j=w-1;
+        while (i<h && j>=0) {
+            if (matrix[i][j]==target) return true;
+            else if (matrix[i][j]>target) j--;
+            else i++;
+        }
+        return false;
+    }
+};
+```
