@@ -65,3 +65,7 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     top: 0 !important;
     z-index: 2;
 }
+
+#book-search-results.open + .disqus_thread {
+    visibility: hidden;
+}
