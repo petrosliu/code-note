@@ -74,12 +74,12 @@ h2 {
     position: -ms-sticky !important;
     position: -o-sticky !important;
     position: sticky !important;
-    top: 50px !important;
+    top: 0 !important;
     z-index: 2 !important;
-    background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 20%, rgba(255,255,255,0.95) 80%, rgba(255,255,255,0) 100%);
-    background: -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 20%, rgba(255,255,255,0.95) 80%, rgba(255,255,255,0) 100%);
-    background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 20%, rgba(255,255,255,0.95) 80%, rgba(255,255,255,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+    background: -webkit-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 48%, rgba(255,255,255,0.75) 74%, rgba(255,255,255,0.06) 98%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2ffffff', endColorstr='#00ffffff',GradientType=0 );
 }
 
 #book-search-input {
