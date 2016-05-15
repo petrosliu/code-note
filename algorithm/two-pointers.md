@@ -178,3 +178,25 @@ public:
     }
 };
 ```
+
+## [Longest Substring with At Most Two Distinct Characters](#longest-substring-with-at-most-two-distinct-characters)
+```c++
+class Solution {
+public:
+    int lengthOfLongestSubstringTwoDistinct(string& s) {
+        int len=s.size();
+        int maxlen=0, begin=0, last=0, end=0;
+        while(end<len && s[end]==s[0]) end++;
+        last=end;
+        while(end<len && s[end]==s[last]) end++;
+        maxlen=max(maxlen, end);
+        while(end<len){
+            if(s[end]!=s[begin] && s[end]!=s[last-1]) begin=last;
+            last=end;
+            while(end<len && s[end]==s[last]) end++;
+            maxlen=max(maxlen, end-begin);
+        }
+        return maxlen;
+    }
+};
+```

@@ -3,28 +3,30 @@
 ## [Longest Increasing Path in a Matrix](#longest-increasing-path-in-a-matrix)
 ```c++
 class Solution {
-    int longestIncreasingPath(vector<vector<int>>& matrix,int i, int j, vector<vector<int>> &length){
-        if(length[i][j]!=0)return length[i][j];
-        int u=1,d=1,l=1,r=1;
-        if(i>0&&matrix[i][j]<matrix[i-1][j])u=longestIncreasingPath(matrix,i-1, j, length)+1;
-        if(i<matrix.size()-1&&matrix[i][j]<matrix[i+1][j])d=longestIncreasingPath(matrix,i+1, j, length)+1;
-        if(j>0&&matrix[i][j]<matrix[i][j-1])l=longestIncreasingPath(matrix,i, j-1, length)+1;
-        if(j<matrix[0].size()-1&&matrix[i][j]<matrix[i][j+1])r=longestIncreasingPath(matrix,i, j+1, length)+1;
-        length[i][j]=max(max(u,d),max(l,r));
+private:
+    int dfs(int i, int j, vector<vector<int>>& matrix, vector<vector<int>>& length){
+        if(!length[i][j]) {
+            length[i][j]=1;
+            if(i>0   && matrix[i-1][j]<matrix[i][j]) length[i][j]=max(length[i][j], dfs(i-1,j,matrix,length)+1);
+            if(i<h-1 && matrix[i+1][j]<matrix[i][j]) length[i][j]=max(length[i][j], dfs(i+1,j,matrix,length)+1);
+            if(j>0   && matrix[i][j-1]<matrix[i][j]) length[i][j]=max(length[i][j], dfs(i,j-1,matrix,length)+1);
+            if(j<w-1 && matrix[i][j+1]<matrix[i][j]) length[i][j]=max(length[i][j], dfs(i,j+1,matrix,length)+1);
+        }
         return length[i][j];
     }
+    int h,w;
 public:
     int longestIncreasingPath(vector<vector<int>>& matrix) {
-        if(!matrix.size()||!matrix[0].size())return 0;
-        vector<int> item(matrix[0].size(),0);
-        vector<vector<int>> length(matrix.size(),item);
-        int maximum=0;
-        for(int i=0;i<matrix.size();i++){
-            for(int j=0;j<matrix[0].size();j++){
-                maximum=max(longestIncreasingPath(matrix,i,j,length),maximum);
+        h=matrix.size();    if(h==0) return 0;
+        w=matrix[0].size(); if(w==0) return 0;
+        vector<vector<int>> length(h,vector<int>(w,0));
+        int ans=1;
+        for(int i=0;i<h;i++) {
+            for(int j=0;j<w;j++) {
+                ans=max(ans, dfs(i,j,matrix,length));
             }
         }
-        return maximum;
+        return ans;
     }
 };
 ```
