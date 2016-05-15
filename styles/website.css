@@ -100,7 +100,7 @@ h2 {
     position: -o-sticky !important;
     position: sticky !important;
     top: 0 !important;
-    z-index: 2;
+    z-index: 3;
 }
 
 #book-search-results.open + #disqus_thread {

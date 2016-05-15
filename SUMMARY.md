@@ -9,6 +9,7 @@
 * [Linked List](data-structure/linked-list.md)
 * [Stack](data-structure/stack.md)
 * [Queue](data-structure/queue.md)
+* [Heap](data-structure/heap.md)
 * [Tree](data-structure/tree.md)
 * [Graph](data-structure/graph.md)
 * [Design](data-structure/design.md)
