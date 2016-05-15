@@ -16,3 +16,28 @@ public:
     }
 };
 ```
+
+## [Top K Frequent Elements](#top-k-frequent-elements)
+```c++
+struct mycomp{
+    bool operator() (unordered_map<int,int>::iterator& l, unordered_map<int,int>::iterator& r){
+        return l->second>r->second;
+    }
+};
+
+class Solution {
+public:
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        unordered_map<int,int> hm;
+        for(auto n:nums) hm[n]++;
+        priority_queue<unordered_map<int,int>::iterator,vector<unordered_map<int,int>::iterator>,mycomp> pq;
+        for(auto it=hm.begin();it!=hm.end();it++){
+            pq.push(it);
+            if(pq.size()>k)pq.pop();
+        }
+        vector<int> ans;
+        while(pq.size()){ans.push_back(pq.top()->first);pq.pop();}
+        return ans;
+    }
+};
+```
