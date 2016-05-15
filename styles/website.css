@@ -50,6 +50,7 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     position: -o-sticky !important;
     position: sticky !important;
     top: 0 !important;
+    z-index: 2 !important;
     -webkit-transition: background ease .4s;
     -moz-transition: background ease .4s;
     -o-transition: background ease .4s;
