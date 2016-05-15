@@ -1,6 +1,17 @@
 li.header {
     text-align: center;
     font-weight: bold;
+    position: -webkit-sticky !important;
+    position: -moz-sticky !important;
+    position: -ms-sticky !important;
+    position: -o-sticky !important;
+    position: sticky !important;
+    top: 50px !important;
+    z-index: 2 !important;
+    background: -moz-linear-gradient(top,  rgba(250,250,250,1) 0%, rgba(250,250,250,1) 90%, rgba(250,250,250,0) 100%);
+    background: -webkit-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(250,250,250,1) 90%,rgba(250,250,250,0) 100%);
+    background: linear-gradient(to bottom,  rgba(250,250,250,1) 0%,rgba(250,250,250,1) 90%,rgba(250,250,250,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#00fafafa',GradientType=0 );
 }
 
 li.chapter:hover,
