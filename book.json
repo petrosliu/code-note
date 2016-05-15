@@ -5,7 +5,9 @@
       "copy-code-button",
       "sitemap",
       "mathjax",
-      "disqus"
+      "disqus",
+      "prism",
+      "-highlight"
       ],
     "pluginsConfig": {
         "sitemap": {
