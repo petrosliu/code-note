@@ -154,3 +154,43 @@ public:
     }
 };
 ```
+
+## [Basic Calculator II](#basic-calculator-ii)
+```c++
+class Solution {
+public:
+    int calculate(string& s) {
+        int sum=0, last=0, i=0;
+        char opt='+';
+        while(i<s.size()){
+            if(s[i]=='+'||s[i]=='-'||s[i]=='*'||s[i]=='/') opt=s[i++];
+            else if(s[i]>='0' && s[i]<='9'){
+                int n=0;
+                while(i<s.size() && s[i]>='0' && s[i]<='9'){
+                    n=n*10+s[i]-'0'; i++;
+                }
+                switch(opt){
+                    case '+':{
+                        sum+=n; last=n;
+                        break;
+                    }
+                    case '-':{
+                        sum-=n; last=-n;
+                        break;
+                    }
+                    case '*':{
+                        sum+=-last+last*n; last*=n;
+                        break;
+                    }
+                    case '/':{
+                        sum+=-last+last/n; last/=n;
+                        break;
+                    }
+                }
+            }
+            else i++;
+        }
+        return sum;
+    }
+};
+```
