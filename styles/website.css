@@ -14,17 +14,6 @@ li.header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#00fafafa',GradientType=0 );
 }
 
-li.divider {
-    position: -webkit-sticky !important;
-    position: -moz-sticky !important;
-    position: -ms-sticky !important;
-    position: -o-sticky !important;
-    position: sticky !important;
-    top: 40px !important;
-    z-index: 2 !important;
-    background-color: #fafafa !important;
-}
-
 li.chapter:hover,
 li.chapter.active {
     background-color: #F0F0F0;
