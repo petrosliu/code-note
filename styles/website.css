@@ -119,9 +119,12 @@ h2 {
   }
 }
 
-.page-inner {
+.page-inner, .disqus_thread {
     animation-name: fadeIn;
     animation-duration: 1s;
-    animation-delay: 0.5s;
     animation-fill-mode: both;
+}
+
+.disqus_thread {
+    animation-delay: 2s;
 }
