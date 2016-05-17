@@ -98,3 +98,27 @@ public:
     }
 };
 ```
+
+## [Reconstruct Itinerary](#reconstruct-itinerary)
+```c++
+class Solution {
+private:
+    void dfs(unordered_map<string,priority_queue<string,vector<string>,greater<string>>>& hm, string depart, vector<string>& trip){
+        while(hm[depart].size()){
+            string arrival=hm[depart].top();
+            hm[depart].pop();
+            dfs(hm, arrival, trip);
+        }
+        trip.push_back(depart);
+    }
+public:
+    vector<string> findItinerary(vector<pair<string, string>> tickets) {
+        unordered_map<string,priority_queue<string,vector<string>,greater<string>>> hm;
+        for(auto& ticket:tickets) hm[ticket.first].push(ticket.second);
+        vector<string> trip;
+        dfs(hm, "JFK", trip);
+        reverse(trip.begin(), trip.end());
+        return trip;
+    }
+};
+```
