@@ -119,12 +119,12 @@ h2 {
   }
 }
 
-.page-inner, .disqus_thread {
+.page-inner, #disqus_thread {
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
 
-.disqus_thread {
+#disqus_thread {
     animation-delay: 2s;
 }
