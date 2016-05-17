@@ -200,3 +200,30 @@ public:
     }
 };
 ```
+
+## [Longest Substring with At Most K Distinct Characters](#longest-substring-with-at-most-k-distinct-characters)
+```c++
+class Solution {
+public:
+    int lengthOfLongestSubstringKDistinct(string& s, int k) {
+        if(k<=0) return 0;
+        int len=s.size();
+        if(k>=len) return len;
+        int slot[256]={};
+        int l=0,r=1,dist=1,maxlen=1;
+        slot[s[0]]++;
+        while(r<len){
+            dist += (slot[s[r]]==0);
+            slot[s[r]]++;
+            while(dist>k){
+                slot[s[l]]--;
+                dist -= (slot[s[l]]==0);
+                l++;
+            }
+            maxlen=max(maxlen,r-l+1);
+            r++;
+        }
+        return maxlen;
+    }
+};
+```
