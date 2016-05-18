@@ -62,17 +62,11 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     position: sticky !important;
     top: 0 !important;
     z-index: 3 !important;
-    -webkit-transition: background ease .4s;
-    -moz-transition: background ease .4s;
-    -o-transition: background ease .4s;
-    transition: background ease .4s;
-    -webkit-transition: background .2s ease;
-    -moz-transition: background .2s ease;
-    -o-transition: background .2s ease;
-    transition: background .2s ease;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: .4s;
     -webkit-transition-delay: 1s;
-    -moz-transition-delay: 1s;
-    -o-transition-delay: 1s;
+    transition-property: background;
+    transition-duration: .4s;
     transition-delay: 1s;
 }
 
