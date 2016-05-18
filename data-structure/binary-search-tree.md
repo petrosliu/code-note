@@ -43,3 +43,74 @@ public:
     }
 };
 ```
+
+## [Closest Binary Search Tree Value II](#closest-binary-search-tree-value-ii)
+```c++
+class Solution {
+private:
+    int search(TreeNode* root, double target, vector<TreeNode*>& path){
+        int closest;
+        path.push_back(root);
+        if(target<root->val && root->left) closest=search(root->left,target,path);
+        else if(target>root->val && root->right) closest=search(root->right,target,path);
+        else closest=root->val;
+        if(fabs(target-(double)closest)>fabs(target-(double)(root->val))){
+            while(path.back()!=root) path.pop_back();
+            closest=root->val;
+        }
+        return closest;
+    }
+    void next(vector<TreeNode*>& path){
+        if(path.back()->right){
+            TreeNode* node=path.back()->right;
+            while(node){
+                path.push_back(node);
+                node=node->left;
+            }
+        }
+        else{
+            while(path.size()>1&&path[path.size()-2]->right==path.back()) path.pop_back();
+            path.pop_back();
+        }
+    }
+    void prev(vector<TreeNode*>& path){
+        if(path.back()->left){
+            TreeNode* node=path.back()->left;
+            while(node){
+                path.push_back(node);
+                node=node->right;
+            }
+        }
+        else{
+            while(path.size()>1&&path[path.size()-2]->left==path.back()) path.pop_back();
+            path.pop_back();
+        }
+    }
+public:
+    vector<int> closestKValues(TreeNode* root, double target, int k) {
+        vector<int> closestK;
+        if(k==0||root==NULL) return closestK;
+        vector<TreeNode*> path1;
+        closestK.push_back(search(root,target,path1));
+        vector<TreeNode*> path2(path1);
+        
+        prev(path1); next(path2);
+        while(closestK.size()<k){
+            if(path1.size()==0&&path2.size()==0) break;
+            else if(path2.size()==0){
+                closestK.push_back(path1.back()->val); prev(path1);
+            }
+            else if(path1.size()==0){
+                closestK.push_back(path2.back()->val); next(path2);
+            }
+            else if(fabs(target-(double)(path1.back()->val))<=fabs(target-(double)(path2.back()->val))){
+                closestK.push_back(path1.back()->val); prev(path1);
+            }
+            else{
+                closestK.push_back(path2.back()->val); next(path2);
+            }
+        }
+        return closestK;
+    }
+};
+```
