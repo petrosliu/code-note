@@ -62,19 +62,7 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     position: sticky !important;
     top: 0 !important;
     z-index: 3 !important;
-    -webkit-transition-property: background;
-    -webkit-transition-duration: .4s;
-    -webkit-transition-delay: 1s;
-    transition-property: background;
-    transition-duration: .4s;
-    transition-delay: 1s;
-}
-
-.book-header:hover {
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%);
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%);
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+    background: white;
 }
 
 h2 {
@@ -83,7 +71,7 @@ h2 {
     position: -ms-sticky !important;
     position: -o-sticky !important;
     position: sticky !important;
-    top: 0 !important;
+    top: 50px !important;
     z-index: 2 !important;
     background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%);
     background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%);
