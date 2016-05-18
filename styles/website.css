@@ -70,6 +70,10 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     -moz-transition: background .2s ease;
     -o-transition: background .2s ease;
     transition: background .2s ease;
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
 }
 
 .book-header:hover {
