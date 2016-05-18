@@ -30,6 +30,7 @@
 * [Sort](algorithm/sort.md)
 * [Bit Manipulation](algorithm/bit-manipulation.md)
 * [Depth-first Search](algorithm/depth-first-search.md)
+* [Breadth-first Search](algorithm/breadth-first-search.md)
 * [Topological Sort](algorithm/topological-sort.md)
 * [Recursion](algorithm/recursion.md)
 * [Memoization](algorithm/memorization.md)
