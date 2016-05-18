@@ -68,7 +68,7 @@ public:
 };
 ```
 
-# [Wiggle Sort II](#wiggle-sort-ii)
+## [Wiggle Sort II](#wiggle-sort-ii)
 ```c++
 class Solution {
 private:
