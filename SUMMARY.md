@@ -6,12 +6,12 @@
 
 * [Hash Table](data-structure/hash-table.md)
 * [Set](data-structure/set.md)
+* [Union Find](data-structure/union-find.md)
 * [Linked List](data-structure/linked-list.md)
 * [Stack](data-structure/stack.md)
 * [Queue](data-structure/queue.md)
 * [Heap](data-structure/heap.md)
 * [Tree](data-structure/tree.md)
-* [Graph](data-structure/graph.md)
 * [Design](data-structure/design.md)
 * [Trie](data-structure/trie.md)
 * [Binary Indexed Tree](data-structure/binary-indexed-tree.md)
