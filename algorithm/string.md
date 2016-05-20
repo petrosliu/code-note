@@ -194,3 +194,30 @@ public:
     }
 };
 ```
+
+## [Read N Characters Given Read4 II - Call multiple times](#read-n-characters-given-read4-ii---call-multiple-times)
+```c++
+int read4(char *buf);
+class Solution {
+private:
+    char buffer4[4];
+    int len=4, i=4;
+public:
+    int read(char *buf, int n) {
+        char* tmp=buf;
+        int num=0;
+        while(num<n) {
+            if(i==4) {
+                len=read4(buffer4);
+                i=0;
+            }
+            else if(i<len) {
+                tmp[0]=buffer4[i];
+                tmp++; i++; num++;
+            }
+            else break;
+        }
+        return num;
+    }
+};
+```
