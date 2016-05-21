@@ -1,11 +1,11 @@
 # [Union Find](#union-find)
 
-## [Graph Valid Tree](#graph-valid-tree)
+## [Number of Connected Components in an Undirected Graph](#number-of-connected-components-in-an-undirected-graph)
 Path Compression: `v=root[v]=root[root[v]];`
 ```c++
 class Solution {
 public:
-    bool validTree(int n, vector<pair<int, int>>& edges) {
+    int countComponents(int n, vector<pair<int, int>>& edges) {
         int root[n];
         for(int i=0;i<n;i++) root[i]=i;
         for(auto& e:edges){
@@ -16,9 +16,8 @@ public:
                 root[v]=w;
                 n--;
             }
-            else return false;
         }
-        return n==1;
+        return n;
     }
 };
 ```
