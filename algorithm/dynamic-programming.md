@@ -176,3 +176,23 @@ public:
     }
 };
 ```
+
+## [Best Time to Buy and Sell Stock with Cooldown](#best-time-to-buy-and-sell-stock-with-cooldown)
+** State Machine **
+```c++
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int len=prices.size();
+        if(len<=1) return 0;
+        int buy[len], sell[len], rest[len];
+        buy[0]=-prices[0]; sell[0]=INT_MIN; rest[0]=0;
+        for(int i=1;i<len;i++){
+            buy[i]  = max(buy[i-1], rest[i-1]-prices[i]);
+            sell[i] = buy[i-1] + prices[i];
+            rest[i] = max(sell[i-1], rest[i-1]);
+        }
+        return max(sell[len-1], rest[len-1]);
+    }
+};
+```
