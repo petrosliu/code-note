@@ -1,7 +1,7 @@
 # [Dynamic Programming](#dynamic-programming)
 
-**Dynamic Programming:** Solve from trivial sub-problems.
-**Memoization:** Solve from the given problem.
+* **Dynamic Programming:** Solve from trivial sub-problems.
+* **Memoization:** Solve from the given problem.
 
 3 characteristics:
 1. Stages;
