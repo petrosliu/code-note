@@ -116,11 +116,3 @@ h2 {
 #disqus_thread {
     animation-delay: 2s;
 }
-
-span.mtime {
-    visibility: hidden;
-}
-
-a:hover > span.mtime {
-    visibility: visible;
-}
