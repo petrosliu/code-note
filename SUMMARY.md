@@ -33,7 +33,6 @@
 * [Breadth-first Search](algorithm/breadth-first-search.md)
 * [Topological Sort](algorithm/topological-sort.md)
 * [Recursion](algorithm/recursion.md)
-* [Memoization](algorithm/memorization.md)
 
 ### Part III - C++
 

@@ -1,27 +1,32 @@
 # [Dynamic Programming](#dynamic-programming)
 
+**Dynamic Programming:** Solve from trivial sub-problems.
+**Memoization:** Solve from the given problem.
+
+3 characteristics:
+1. Stages;
+2. States;
+3. Recursive Optimization. 
+
 ## [Burst Balloons](#burst-balloons)
 ```c++
 class Solution {
 public:
     int maxCoins(vector<int>& nums) {
-        int len=nums.size();
-        int nums_i[len+2];
-        nums_i[0]=1;
-        for(int i=0;i<len;i++) nums_i[i+1]=nums[i];
-        nums_i[len+1]=1;
-        len+=2;
-        int dp[len][len]={};
-        for(int step=2;step<len;step++){
-            for(int l=0;l<len-step;l++){
-                int r=l+step;
-                for(int i=l+1;i<r;i++){
-                    int n=nums_i[l]*nums_i[i]*nums_i[r]+dp[l][i]+dp[i][r];
-                    dp[l][r]=(dp[l][r]<n)?n:dp[l][r];
+        int length=nums.size()+2;
+        int n[length];
+        n[0]=n[length-1]=1;
+        copy(nums.begin(), nums.end(), n+1);
+        int dp[length][length]={};
+        for(int len=2;len<length;len++){
+            for(int l=0;l+len<length;l++){
+                int r=l+len;
+                for(int final=l+1;final<r;final++){
+                    dp[l][r]=max(dp[l][r],n[l]*n[final]*n[r]+dp[l][final]+dp[final][r]);
                 }
             }
         }
-        return dp[0][len-1];
+        return dp[0][length-1];
     }
 };
 ```
@@ -193,6 +198,26 @@ public:
             rest[i] = max(sell[i-1], rest[i-1]);
         }
         return max(sell[len-1], rest[len-1]);
+    }
+};
+```
+
+## [Perfect Squares](#perfect-squares)
+**Static Dynamic Programming**
+```c++
+class Solution {
+public:
+    int numSquares(int n) {
+        if(n<1) return 0;
+        static vector<int> dp(1,0); //static dynamic programming for multiple calls
+        for(int i=dp.size();i<=n;i++){
+            int mini=INT_MAX;
+            for(int j=1;j*j<=i;j++){
+                mini=min(mini,1+dp[i-j*j]);
+            }
+            dp.push_back(mini);
+        }
+        return dp[n];
     }
 };
 ```

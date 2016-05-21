@@ -1,7 +1,7 @@
 # [Union Find](#union-find)
 
 ## [Number of Connected Components in an Undirected Graph](#number-of-connected-components-in-an-undirected-graph)
-Path Compression: `v=root[v]=root[root[v]];`
+**Path Compression:** `v=root[v]=root[root[v]];`
 ```c++
 class Solution {
 public:
