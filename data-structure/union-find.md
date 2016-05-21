@@ -1,5 +1,28 @@
 # [Union Find](#union-find)
 
+## [Graph Valid Tree](#graph-valid-tree)
+Path Compression: `v=root[v]=root[root[v]];`
+```c++
+class Solution {
+public:
+    bool validTree(int n, vector<pair<int, int>>& edges) {
+        int root[n];
+        for(int i=0;i<n;i++) root[i]=i;
+        for(auto& e:edges){
+            int v=e.first, w=e.second;
+            while(v!=root[v]) v=root[v]=root[root[v]];
+            while(w!=root[w]) w=root[w]=root[root[w]];
+            if(v!=w) {
+                root[v]=w;
+                n--;
+            }
+            else return false;
+        }
+        return n==1;
+    }
+};
+```
+
 ## [Number of Islands II](#number-of-islands-ii)
 ```c++
 class Solution {
@@ -33,35 +56,6 @@ public:
             ans.push_back(num);
         }
         return ans;
-    }
-};
-```
-
-## [Graph Valid Tree](#graph-valid-tree)
-```c++
-class Solution {
-private:
-    inline int getRoot(int* root, int n){
-        int r=n,tmp;
-        while(root[r]!=r) r=root[r];
-        while(root[n]!=r){
-            tmp=root[n];
-            root[n]=r;
-            n=tmp;
-        }
-        return r;
-    }
-public:
-    bool validTree(int n, vector<pair<int, int>>& edges) {
-        int root[n];
-        for(int i=0;i<n;i++) root[i]=i;
-        for(auto& e:edges){
-            if(getRoot(root,e.first)==getRoot(root,e.second)) return false;
-            root[root[e.first]]=e.second;
-        }
-        int ntree=0;
-        for(int i=0;i<n;i++) if(root[i]==i) ntree++;
-        return ntree==1;
     }
 };
 ```
