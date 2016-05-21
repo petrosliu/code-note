@@ -36,3 +36,32 @@ public:
     }
 };
 ```
+
+## [Graph Valid Tree](#graph-valid-tree)
+```c++
+class Solution {
+private:
+    inline int getRoot(int* root, int n){
+        int r=n,tmp;
+        while(root[r]!=r) r=root[r];
+        while(root[n]!=r){
+            tmp=root[n];
+            root[n]=r;
+            n=tmp;
+        }
+        return r;
+    }
+public:
+    bool validTree(int n, vector<pair<int, int>>& edges) {
+        int root[n];
+        for(int i=0;i<n;i++) root[i]=i;
+        for(auto& e:edges){
+            if(getRoot(root,e.first)==getRoot(root,e.second)) return false;
+            root[root[e.first]]=e.second;
+        }
+        int ntree=0;
+        for(int i=0;i<n;i++) if(root[i]==i) ntree++;
+        return ntree==1;
+    }
+};
+```
