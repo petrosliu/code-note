@@ -117,10 +117,10 @@ h2 {
     animation-delay: 2s;
 }
 
-span.mtime {
+p.mtime {
     visibility: hidden;
 }
 
-a:hover > span.mtime {
+a:hover > p.mtime {
     visibility: visible;
 }
