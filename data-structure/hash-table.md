@@ -65,3 +65,45 @@ private:
     }
 };
 ```
+
+## [Palindrome Pairs](#palindrome-pairs)
+```c++
+class Solution {
+private:
+    inline bool isPalindrome(string& s){
+        int i = 0, j = s.size() - 1; 
+        while(i < j) if(s[i++] != s[j--]) return false;
+        return true;
+    }
+public:
+    vector<vector<int>> palindromePairs(vector<string>& words) {
+        unordered_map<string, int> dict;
+        vector<vector<int>> pairs;
+        for(int i = 0; i < words.size(); i++) {
+            string w = words[i];
+            reverse(w.begin(), w.end());
+            dict[w] = i;
+        }
+        if(dict.find("")!=dict.end()){
+            int idxz=dict[""];
+            for(int i = 0; i < words.size(); i++){
+                if(i!=idxz && isPalindrome(words[i])) pairs.push_back({idxz, i});
+            }
+        }
+        for(int i = 0; i < words.size(); i++) {
+            auto& word=words[i];
+            for(int j = 0; j < word.size(); j++) {
+                string left = word.substr(0, j);
+                string right = word.substr(j);
+                if(dict.find(left) != dict.end() && dict[left] != i && isPalindrome(right)) {
+                    pairs.push_back({i, dict[left]});
+                }
+                if(dict.find(right) != dict.end() && dict[right] != i && isPalindrome(left)) {
+                    pairs.push_back({dict[right], i});
+                }
+            }
+        }
+        return pairs;
+    }
+};
+```
