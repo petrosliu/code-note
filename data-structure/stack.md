@@ -76,3 +76,28 @@ public:
     }
 };
 ```
+
+## [Remove Duplicate Letters](#remove-duplicate-letters)
+```c++
+class Solution {
+public:
+    string removeDuplicateLetters(string& s) {
+        int counter[26]={};
+        bool inside[26]={};
+        for(auto& c:s) counter[c-'a']++;
+        vector<char> stk;
+        for(auto& c:s){
+            if(!inside[c-'a']){
+                while(!stk.empty() && stk.back()>c && counter[stk.back()-'a']){
+                    inside[stk.back()-'a']=false;
+                    stk.pop_back();
+                }
+                stk.push_back(c);
+            }
+            counter[c-'a']--;
+            inside[c-'a']=true;
+        }
+        return string(stk.begin(),stk.end());
+    }
+};
+```
