@@ -221,3 +221,48 @@ public:
     }
 };
 ```
+
+## [Create Maximum Number](#create-maximum-number)
+```c++
+class Solution {
+    inline void maxNumber(vector<int>& res, vector<int>& nums1, vector<int>& nums2){
+        int len1=nums1.size(),len2=nums2.size(),i=0;
+        bool decided=false;
+        while (nums1.size()||nums2.size()) {
+            vector<int>& next=nums1>nums2?nums1:nums2;
+            int n=next[0];
+            next.erase(next.begin());
+            if(!decided){
+                if(n<res[i]) return;
+                else if(n>res[i]) decided=true;
+            }
+            res[i++]=n;
+        }
+    }
+    inline vector<vector<int>> generatedp(vector<int>& nums, int s, int e){
+        vector<vector<int>> dp(e+2,vector<int>());
+        dp[e+1]=nums;
+        int j=0;
+        for(int i=e;i>=s;--i){
+            dp[i]=dp[i+1];
+            while(dp[i].size()>i){
+                while(j<dp[i].size()-1&&dp[i][j]>=dp[i][j+1]) ++j;
+                dp[i].erase(dp[i].begin()+j);
+                j=max(0,j-1);
+            }
+        }
+        return dp;
+    }
+public:
+    vector<int> maxNumber(vector<int>& nums1, vector<int>& nums2, int k) {
+        int len1=nums1.size(),len2=nums2.size();
+        int s1=max(0,k-len2), e1=min(len1,k);
+        int s2=max(0,k-len1), e2=min(len2,k);
+        vector<vector<int>> dp1=generatedp(nums1,s1,e1);
+        vector<vector<int>> dp2=generatedp(nums2,s2,e2);
+        vector<int> res(k,0);
+        for(int i=s1;i<=e1;++i) maxNumber(res,dp1[i],dp2[k-i]);
+        return res;
+    }
+};
+```
