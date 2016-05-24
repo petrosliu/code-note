@@ -69,3 +69,37 @@ public:
     }
 };
 ```
+
+## [Minimum Height Trees](#minimum-height-trees)
+```c++
+class Solution {
+public:
+    vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges) {
+        if(n==1) return {0};
+        unordered_map<int,unordered_set<int>> graph;
+        for(auto& e:edges){
+            graph[e.first].insert(e.second);
+            graph[e.second].insert(e.first);
+        }
+        queue<int> leaves;
+        for(auto& kv:graph){
+            if(kv.second.size()<=1) leaves.push(kv.first);
+        }
+        while(graph.size()>2){
+            int num=leaves.size();
+            while(num--){
+                int v=leaves.front();
+                for(auto& w:graph[v]){
+                    graph[w].erase(v);
+                    if(graph[w].size()==1) leaves.push(w);
+                }
+                graph.erase(v);
+                leaves.pop();
+            }
+        }
+        vector<int> res;
+        for(auto& kv:graph)res.push_back(kv.first);
+        return res;
+    }
+};
+```
