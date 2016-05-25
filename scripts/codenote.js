@@ -18,7 +18,7 @@ var clipboards = new Clipboard('.copy-code-button', {
 });
 clipboards.on('success', function(e) {
     e.clearSelection();
-    e.trigger.innerHTML='Copied';
+    e.trigger.innerHTML='<i class="fa fa-check" aria-hidden="true"></i>';
 });
 clipboards.on('error', function(e) {
     e.trigger.innerHTML=fallbackMessage(e.action);
@@ -30,9 +30,9 @@ function fallbackMessage(action) {
     if (/iPhone|iPad/i.test(navigator.userAgent)) {
         actionMsg = 'No support :(';
     } else if (/Mac/i.test(navigator.userAgent)) {
-        actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        actionMsg = '<i class="fa fa-exclamation" aria-hidden="true"></i> Press <kbd>&#8984;-' + actionKey + '</kbd> to ' + action;
     } else {
-        actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        actionMsg = '<i class="fa fa-exclamation" aria-hidden="true"></i> Press <kbd>Ctrl-' + actionKey + '</kbd> to ' + action;
     }
     return actionMsg;
 }
