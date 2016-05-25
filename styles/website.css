@@ -64,9 +64,10 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     z-index: 2 !important;
     background: white;
 }
+
 .book-header h1{
     opacity: 1;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 h2 {

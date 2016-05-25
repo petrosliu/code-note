@@ -28,6 +28,9 @@ public:
 ```
 
 ## [Count of Range Sum](#count-of-range-sum)
+[Merge Sort Method](../algorithm/divide-and-conquer.html#count-of-range-sum)
+
+**Multiset**
 ```c++
 class Solution {
 public:
