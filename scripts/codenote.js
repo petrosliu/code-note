@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    var codes = document.getElementsByTagName("code");
+    var pres = document.getElementsByTagName("pre");
     for (var i=0; i<codes.length; i++) {
-        codes[i].innerHTML+='<button class="copy-code-button">Copy</button>';
+        pres[i].innerHTML+='<button class="copy-code-button">Copy</button>';
     }
     new Clipboard('.copy-code-button', {
         target: function(trigger) {
