@@ -11,3 +11,16 @@ public:
     }
 };
 ```
+```c++
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        int len=nums.size(),idx=0;
+        k%=len;
+        while(k){
+            for(int i=0;i<k;i++) swap(nums[idx+i],nums[idx+len-k+i]);
+            idx+=k;len-=k;k%=len;
+        }
+    }
+};
+```
