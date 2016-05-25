@@ -4,6 +4,7 @@
 
 ### Part I - Data Structure
 
+* [Array](data-structure/array.md)
 * [Hash Table](data-structure/hash-table.md)
 * [Set](data-structure/set.md)
 * [Union Find](data-structure/union-find.md)
