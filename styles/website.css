@@ -124,7 +124,7 @@ h2 {
     animation-delay: 2s;
 }
 
-kbd {
+button.copy-code-button > kbd {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     padding: 2px 4px;
     font-size: 90%;
@@ -132,7 +132,7 @@ kbd {
     background-color: #333;
     border-radius: 3px;
 }
-kbd kbd {
+button.copy-code-button > kbd kbd {
   padding: 0;
   font-size: 100%;
   font-weight: bold;

@@ -222,6 +222,29 @@ public:
 };
 ```
 
+## [Knuth-Morris-Pratt Algorithm (KMP)](#knuth-morris-pratt-algorithm-kmp)
+```c++
+bool KMP(string& pattern, string& text){
+    int lenp=pattern.size(),lent=text.size();
+    int kmptable[lenp]={};
+    for(int i=1;i<lenp;i++){
+        int j=kmptable[i-1];
+        while(j && pattern[i]!=pattern[j]) j=kmptable[j-1];
+        kmptable[i]=j+(pattern[i]==pattern[j]);
+    }
+    int i=0,j=0;
+    while(i<lent){
+        if(text[i]==pattern[j]){
+            i++;j++;
+            if(j==lenp) return true; //loc: i-lenp
+        }
+        else if(j) j=kmptable[j-1];
+        else i++;
+    }
+    return false;
+}
+```
+
 ## [Shortest Palindrome](#shortest-palindrome)
 **KMP algorithm**
 ```c++
