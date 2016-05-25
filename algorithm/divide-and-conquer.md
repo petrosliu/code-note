@@ -44,9 +44,7 @@ public:
 ```
 
 ## [Count of Range Sum](#count-of-range-sum)
-[Multiset Method](../data-structure/set.html#count-of-range-sum)
-
-**Merge Sort** 
+**Merge Sort**
 ```c++
 class Solution {
 private:
@@ -83,3 +81,4 @@ public:
     }
 };
 ```
+See also [Multiset Method](../data-structure/set.html#count-of-range-sum)
