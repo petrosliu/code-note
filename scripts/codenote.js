@@ -1,7 +1,13 @@
 $(document).ready(function() {
     var pres = document.getElementsByTagName("pre");
-    for (var i=0; i<pres.length; i++) {
+    for (var i = 0; i < pres.length; i++) {
         pres[i].innerHTML+='<button class="copy-code-button"><i class="fa fa-clipboard" aria-hidden="true"></i></button>';
+    }
+    var btns = document.querySelectorAll('.copy-code-button');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.innerHTML='<i class="fa fa-clipboard" aria-hidden="true"></i>';
+        });
     }
 });
 
@@ -18,12 +24,6 @@ clipboards.on('error', function(e) {
     e.trigger.innerHTML=fallbackMessage(e.action);
 });
 
-var btns = document.querySelectorAll('.copy-code-button');
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('mouseleave', function(e) {
-        e.currentTarget.innerHTML='<i class="fa fa-clipboard" aria-hidden="true"></i>';
-    });
-}
 function fallbackMessage(action) {
     var actionMsg = '';
     var actionKey = (action === 'cut' ? 'X' : 'C');
