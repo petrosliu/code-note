@@ -9,19 +9,18 @@ $(document).ready(function() {
             e.currentTarget.innerHTML='<i class="fa fa-fw fa-clipboard" aria-hidden="true"></i>';
         });
     }
-});
-
-var clipboards = new Clipboard('.copy-code-button', {
-    target: function(trigger) {
-        return trigger.previousElementSibling;
-    }
-});
-clipboards.on('success', function(e) {
-    e.clearSelection();
-    e.trigger.innerHTML='<i class="fa fa-fw fa-smile-o" aria-hidden="true"></i>';
-});
-clipboards.on('error', function(e) {
-    e.trigger.innerHTML=fallbackMessage(e.action);
+    var clipboards = new Clipboard('.copy-code-button', {
+        target: function(trigger) {
+            return trigger.previousElementSibling;
+        }
+    });
+    clipboards.on('success', function(e) {
+        e.clearSelection();
+        e.trigger.innerHTML='<i class="fa fa-fw fa-smile-o" aria-hidden="true"></i>';
+    });
+    clipboards.on('error', function(e) {
+        e.trigger.innerHTML=fallbackMessage(e.action);
+    });
 });
 
 function fallbackMessage(action) {
