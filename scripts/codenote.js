@@ -30,9 +30,9 @@ function fallbackMessage(action) {
     if (/iPhone|iPad/i.test(navigator.userAgent)) {
         actionMsg = 'No support :(';
     } else if (/Mac/i.test(navigator.userAgent)) {
-        actionMsg = '<i class="fa fa-exclamation" aria-hidden="true"></i> Press <kbd>&#8984;-' + actionKey + '</kbd> to ' + action;
+        actionMsg = 'Press <kbd><kbd>&#8984;</kbd>-<kbd>' + actionKey + '</kbd></kbd> to ' + action;
     } else {
-        actionMsg = '<i class="fa fa-exclamation" aria-hidden="true"></i> Press <kbd>Ctrl-' + actionKey + '</kbd> to ' + action;
+        actionMsg = 'Press <kbd><kbd>Ctrl</kbd>-<kbd>' + actionKey + '</kbd></kbd> to ' + action;
     }
     return actionMsg;
 }

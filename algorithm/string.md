@@ -221,3 +221,23 @@ public:
     }
 };
 ```
+
+## [Shortest Palindrome](#shortest-palindrome)
+**KMP algorithm**
+```c++
+class Solution {
+public:
+    string shortestPalindrome(string& s) {
+        string r=s;
+        reverse(r.begin(),r.end());
+        string pattern=s+'#'+r;
+        vector<int> kmp(pattern.size(),0);
+        for(int i=1;i<kmp.size();i++){
+            int j=kmp[i-1];
+            while(j>0&&pattern[i]!=pattern[j]) j=kmp[j-1];
+            kmp[i]=j+(pattern[i]==pattern[j]);
+        }
+        return r.substr(0,r.size()-kmp.back())+s;
+    }
+};
+```
