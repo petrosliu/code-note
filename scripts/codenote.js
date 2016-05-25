@@ -22,9 +22,9 @@ clipboards.on('error', function(e) {
 });
 $(document).ready(function()
 {
-    document.onchange = function(){
+    document.getElementsByTagName("body")[0].addEventListener("change", function(){
         console.log("run!\n");
-    };
+    });
 });
 
 function fallbackMessage(action) {
