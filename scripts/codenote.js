@@ -22,10 +22,9 @@ clipboards.on('error', function(e) {
 });
 $(document).ready(function()
 {
-    $(document).live("onchange",function()
-    {
+    document.onchange = function(){
         console.log("run!\n");
-    });
+    };
 });
 
 function fallbackMessage(action) {
