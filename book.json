@@ -2,7 +2,6 @@
     "title": "Code Note · Yiding Liu",
     "gitbook": ">=3.0.0-pre.0",
     "plugins": [
-      "copy-code-button",
       "sitemap",
       "mathjax",
       "disqus",
@@ -17,7 +16,8 @@
         },
         "scripts": {
             "files": [
-                "scripts/ga.js"
+                "scripts/clipboard.min.js",
+                "scripts/codenote.js"
             ]
         }
     }
