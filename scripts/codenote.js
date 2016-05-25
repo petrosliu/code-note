@@ -12,22 +12,17 @@ var clipboards = new Clipboard('.copy-code-button', {
 });
 clipboards.on('success', function(e) {
     e.clearSelection();
-    showTooltip(e.trigger, 'Copied!');
+    e.trigger.innerHTML='Copied';
 });
 clipboards.on('error', function(e) {
-    showTooltip(e.trigger, fallbackMessage(e.action));
+    e.trigger.innerHTML=fallbackMessage(e.action);
 });
 
 var btns = document.querySelectorAll('.copy-code-button');
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener('mouseleave', function(e) {
-        e.currentTarget.setAttribute('class', 'btn');
-        e.currentTarget.removeAttribute('aria-label');
+        e.currentTarget.innerHTML='<i class="fa fa-clipboard" aria-hidden="true"></i>';
     });
-}
-function showTooltip(elem, msg) {
-    elem.setAttribute('class', 'btn tooltipped tooltipped-s');
-    elem.setAttribute('aria-label', msg);
 }
 function fallbackMessage(action) {
     var actionMsg = '';
@@ -41,7 +36,6 @@ function fallbackMessage(action) {
     }
     return actionMsg;
 }
-hljs.initHighlightingOnLoad();
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-71764085-1', 'auto');ga('send', 'pageview');
 
