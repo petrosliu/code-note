@@ -22,7 +22,7 @@ clipboards.on('error', function(e) {
 });
 $(document).ready(function()
 {
-    document.getElementsByTagName("body")[0].addEventListener("change", function(){
+    window.addEventListener("onchange", function(){
         console.log("run!\n");
     });
 });
