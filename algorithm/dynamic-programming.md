@@ -8,6 +8,34 @@
 2. States;
 3. Recursive Optimization. 
 
+## Knapsack Problem
+0-1 Knapsack Problem
+```c++
+int ksp(int capability, vector<int>& weights, vector<int>& values){
+    int nums=weights.size();
+    int dp[capability+1]={};
+    for(int i=0;i<nums;++i){
+        for(int j=capability;j>=1;--j){
+            if(j-weights[i]>=0) dp[j]=max(dp[j],dp[j-weights[i]]+values[i]);
+        }
+    }
+    return dp[capability];
+}
+```
+Complete Knapsack Problem
+```c++
+int cksp(int capability, vector<int>& weights, vector<int>& values){
+    int nums=weights.size();
+    int dp[capability+1]={};
+    for(int i=0;i<nums;++i){
+        for(int j=1;j<=capability;++j){
+            if(j-weights[i]>=0) dp[j]=max(dp[j],dp[j-weights[i]]+values[i]);
+        }
+    }
+    return dp[capability];
+}
+```
+
 ## [Burst Balloons](#burst-balloons)
 ```c++
 class Solution {

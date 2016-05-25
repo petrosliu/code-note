@@ -20,8 +20,13 @@ clipboards.on('success', function(e) {
 clipboards.on('error', function(e) {
     e.trigger.innerHTML=fallbackMessage(e.action);
 });
-
-console.log("run!\n");
+$(document).ready(function()
+{
+    $(document).live("onchange",function()
+    {
+        console.log("run!\n");
+    });
+});
 
 function fallbackMessage(action) {
     var actionMsg = '';
