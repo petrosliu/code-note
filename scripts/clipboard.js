@@ -9,7 +9,7 @@ for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener('mouseleave', function(e) {
         setTimeout(function(e){
             e.currentTarget.innerHTML='<i class="fa fa-fw fa-clipboard" aria-hidden="true"></i>';
-        }, 500);
+        }, 500, e);
     });
 }
 var clipboards = new Clipboard('.copy-code-button', {
