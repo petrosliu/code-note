@@ -3,15 +3,11 @@
     "gitbook": ">=3.0.0-pre.0",
     "plugins": [
       "sitemap",
-      "mathjax",
-      "disqus"
+      "mathjax"
       ],
     "pluginsConfig": {
         "sitemap": {
             "hostname": "http://codenote.liuyid.in/"
-        },
-        "disqus": {
-            "shortName": "yidingliu"
         },
         "sharing": {
             "facebook": false,
