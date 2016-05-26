@@ -102,6 +102,18 @@ h2 {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .page-inner, #disqus_thread {
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -109,8 +121,11 @@ h2 {
 }
 
 #disqus_thread {
-    padding-top: 40px;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
     animation-delay: 2s;
+    padding-top: 40px;
 }
 
 button.copy-code-button > kbd {
