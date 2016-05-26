@@ -19,10 +19,6 @@ li.chapter.active {
     background-color: #F0F0F0;
 }
 
-a:link, a:visited, a:hover, a:active {
-    color: #4183c4;
-}
-
 li > a:link, li > a:visited, li > a:hover, li > a:active {
     text-decoration: none !important;
 }
@@ -130,6 +126,10 @@ h2 {
     animation-fill-mode: both;
     animation-delay: 2s;
     padding-top: 40px;
+}
+
+#disqus_thread a:link, #disqus_thread a:visited, #disqus_thread a:hover, #disqus_thread a:active {
+    color: #008cff;
 }
 
 button.copy-code-button > kbd {
