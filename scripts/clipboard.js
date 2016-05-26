@@ -7,7 +7,7 @@ for (var i = 0; i < pres.length; i++) {
 var btns = document.querySelectorAll('.copy-code-button');
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener('mouseleave', function(e) {
-        setTimeout(function(){
+        setTimeout(function(e){
             e.currentTarget.innerHTML='<i class="fa fa-fw fa-clipboard" aria-hidden="true"></i>';
         }, 500);
     });
