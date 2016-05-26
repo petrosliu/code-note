@@ -52,11 +52,6 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
     background-color: transparent;
 }
 
-.js-toolbar-action > .fa-facebook,
-.js-toolbar-action > .fa-twitter {
-    visibility: hidden;
-}
-
 .book-header {
     position: -webkit-sticky !important;
     position: -moz-sticky !important;
