@@ -24,6 +24,7 @@
         <script src="{{ resource.path|resolveAsset }}"></script>
         {% endif %}
     {% endfor %}
+    <script src="/scripts/ga.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -56,6 +57,7 @@
                                     {{ page.content|safe }}
                                     {% endblock %}
                                     </section>
+                                    <script src="/scripts/clipboard.js"></script>
                                 </div>
                                 <div class="search-results">
                                     <div class="has-results">

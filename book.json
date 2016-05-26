@@ -4,8 +4,7 @@
     "plugins": [
       "sitemap",
       "mathjax",
-      "disqus",
-      "scripts"
+      "disqus"
       ],
     "pluginsConfig": {
         "sitemap": {
@@ -13,12 +12,6 @@
         },
         "disqus": {
             "shortName": "yidingliu"
-        },
-        "scripts": {
-            "files": [
-                "scripts/clipboard.min.js",
-                "scripts/codenote.js"
-            ]
         },
         "sharing": {
             "facebook": false,

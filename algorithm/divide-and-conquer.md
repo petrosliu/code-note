@@ -81,4 +81,4 @@ public:
     }
 };
 ```
-See also [Multiset Method](../data-structure/set.html#count-of-range-sum)
+See also [Multiset Method](/data-structure/set.html#count-of-range-sum)

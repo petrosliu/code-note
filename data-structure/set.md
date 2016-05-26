@@ -45,4 +45,4 @@ public:
     }
 };
 ```
-See also [Merge Sort Method](../algorithm/divide-and-conquer.html#count-of-range-sum)
+See also [Merge Sort Method](/algorithm/divide-and-conquer.html#count-of-range-sum)
