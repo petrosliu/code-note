@@ -31,11 +31,11 @@ function fallbackMessage(action) {
     var actionMsg = '';
     var actionKey = (action === 'cut' ? 'X' : 'C');
     if (/iPhone|iPad/i.test(navigator.userAgent)) {
-        actionMsg = 'No support :(';
+        actionMsg = 'No support <i class="fa fa-fw fa-frown-o" aria-hidden="true"></i>';
     } else if (/Mac/i.test(navigator.userAgent)) {
-        actionMsg = 'Press <kbd><kbd>&#8984;</kbd>-<kbd>' + actionKey + '</kbd></kbd> to ' + action + '<i class="fa fa-fw fa-frown-o" aria-hidden="true"></i>';
+        actionMsg = 'Press <kbd><kbd>&#8984;</kbd>-<kbd>' + actionKey + '</kbd></kbd> to ' + action + ' <i class="fa fa-fw fa-frown-o" aria-hidden="true"></i>';
     } else {
-        actionMsg = 'Press <kbd><kbd>Ctrl</kbd>-<kbd>' + actionKey + '</kbd></kbd> to ' + action + '<i class="fa fa-fw fa-frown-o" aria-hidden="true"></i>';
+        actionMsg = 'Press <kbd><kbd>Ctrl</kbd>-<kbd>' + actionKey + '</kbd></kbd> to ' + action + ' <i class="fa fa-fw fa-frown-o" aria-hidden="true"></i>';
     }
     return actionMsg;
 }

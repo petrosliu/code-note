@@ -53,12 +53,13 @@ public:
 class Solution {
 public:
     int maxProduct(vector<string>& words) {
-        if(words.size()<=1) return 0;
+        int len=words.size();
+        if(len<=1) return 0;
         int ans=0;
-        vector<int> mask(words.size(),0);
-        for(int i=words.size()-1;i>=0;--i){
-            for(auto c:words[i]) mask[i]|=(1<<(c-'a'));
-            for(int j=words.size()-1;j>i;--j){
+        int mask[len]={};
+        for(int i=0;i<len;++i){
+            for(auto& c:words[i]) mask[i]|=(1<<(c-'a'));
+            for(int j=0;j<i;++j){
                 if(0==(mask[i]&mask[j])) ans=max(ans,(int)words[i].size()*(int)words[j].size());
             }
         }
