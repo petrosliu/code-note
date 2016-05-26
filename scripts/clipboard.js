@@ -7,9 +7,10 @@ for (var i = 0; i < pres.length; i++) {
 var btns = document.querySelectorAll('.copy-code-button');
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener('mouseleave', function(e) {
-        setTimeout(function(e){
-            e.currentTarget.innerHTML='<i class="fa fa-fw fa-clipboard" aria-hidden="true"></i>';
-        }, 500, e);
+        var btn=e.currentTarget;
+        setTimeout(function() {
+            btn.innerHTML='<i class="fa fa-fw fa-clipboard" aria-hidden="true"></i>';
+        }, 500);
     });
 }
 var clipboards = new Clipboard('.copy-code-button', {
