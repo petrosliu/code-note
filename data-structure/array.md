@@ -24,3 +24,30 @@ public:
     }
 };
 ```
+
+## [Majority Element](#majority-element)
+**Boyer–Moore Majority Vote Algorithm**
+```c++
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums, int k) {
+        int bound=nums.size()/3; // ⌊lenth/k⌋
+        unordered_map<int,int> counter;
+        for(auto& n:nums){
+            if(counter.find(n)==counter.end()&&counter.size()==k){
+                auto it=counter.begin();
+                while(it!=counter.end()){
+                    if(--(it->second)) it++;
+                    else counter.erase(it);
+                }
+            }
+            counter[n]++;
+        }
+        for(auto& kv:counter) kv.second=0;
+        for(auto& n:nums) if(counter.find(n)!=counter.end()) counter[n]++;
+        vector<int> res;
+        for(auto& kv:counter) if(kv.second>bound) res.push_back(kv.first);
+        return res;
+    }
+};
+```

@@ -8,8 +8,8 @@
 2. States;
 3. Recursive Optimization. 
 
-## Knapsack Problem
-0-1 Knapsack Problem
+## [Knapsack Problem](#knapsack-problem)
+0-1 Knapsack Problem:
 ```c++
 int ksp(int capability, vector<int>& weights, vector<int>& values){
     int nums=weights.size();
@@ -22,7 +22,7 @@ int ksp(int capability, vector<int>& weights, vector<int>& values){
     return dp[capability];
 }
 ```
-Complete Knapsack Problem
+Complete Knapsack Problem:
 ```c++
 int cksp(int capability, vector<int>& weights, vector<int>& values){
     int nums=weights.size();
