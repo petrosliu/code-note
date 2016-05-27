@@ -139,7 +139,7 @@ button.copy-code-button > kbd {
     padding: 2px 4px;
     font-size: 90%;
     color: #fff;
-    background-color: #333;
+    background-color: #8e908c;
     border-radius: 3px;
 }
 button.copy-code-button:hover > kbd {
