@@ -69,11 +69,11 @@ public:
 ```c++
 class Solution {
 public:
-    int countPrimes(const int n) {
+    int countPrimes(int n) {
         if (n<=2) return 0;
         bool passed[n>>1] = {};
         int counter = 1;
-        const int upper = sqrt(n);
+        int upper = sqrt(n);
         for (int i=3; i<n; i+=2) {
             if (!passed[i>>1]) {
                 counter++;

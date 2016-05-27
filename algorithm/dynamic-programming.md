@@ -294,3 +294,19 @@ public:
     }
 };
 ```
+
+## [Paint Fence](#paint-fence)
+class Solution {
+public:
+    int numWays(int n, int k) {
+        if(n==0||k==0)return 0;
+        int rep[n+1], nrep[n+1];
+        rep[1]=0;
+        nrep[1]=k;
+        for(int i=2;i<=n;i++){
+            rep[i]=nrep[i-1];
+            nrep[i]=(rep[i-1]+nrep[i-1])*(k-1);
+        }
+        return rep[n]+nrep[n];
+    }
+};
