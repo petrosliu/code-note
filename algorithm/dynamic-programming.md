@@ -296,6 +296,7 @@ public:
 ```
 
 ## [Paint Fence](#paint-fence)
+```c++
 class Solution {
 public:
     int numWays(int n, int k) {
@@ -310,3 +311,4 @@ public:
         return rep[n]+nrep[n];
     }
 };
+```

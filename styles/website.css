@@ -27,20 +27,6 @@ pre {
     position: relative;
 }
 
-button.copy-code-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 3px;
-    background-color: transparent;
-    color: #8e908c;
-    border: none;
-}
-
-button.copy-code-button:hover {
-    color: #444;
-}
-
 h1 > a:link, h1 > a:visited, h1 > a:hover, h1 > a:active, 
 h2 > a:link, h2 > a:visited, h2 > a:hover, h2 > a:active, 
 h3 > a:link, h3 > a:visited, h3 > a:hover, h3 > a:active, 
@@ -132,6 +118,22 @@ h2 {
     color: #008cff;
 }
 
+button.copy-code-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 3px;
+    background-color: transparent;
+    color: #8e908c;
+    border: none;
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+button.copy-code-button:hover {
+    color: #444;
+}
 button.copy-code-button > kbd {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     padding: 2px 4px;
@@ -139,6 +141,9 @@ button.copy-code-button > kbd {
     color: #fff;
     background-color: #333;
     border-radius: 3px;
+}
+button.copy-code-button:hover > kbd {
+    background-color: #444;
 }
 button.copy-code-button > kbd kbd {
   padding: 0;
