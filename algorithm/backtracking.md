@@ -111,3 +111,36 @@ public:
     }
 };
 ```
+
+## [De Bruijn Sequence](#de-bruijn-sequence)
+```c++
+class Solution{
+private:
+    bool build(string& res, unordered_set<string>& S, int k, int n, int length){
+        int len=res.size();
+        if(len==length) return true;
+        string item=res.substr(len-n+1)+'a';
+        for(int i=0;i<k;i++){
+            item.back()='a'+i;
+            if(S.find(item)==S.end()){
+                S.insert(item);
+                res.push_back('a'+i);
+                if(build(res,S,k,n,length)) return true;
+                res.pop_back();
+                S.erase(item);
+            }
+        }
+        return false;
+    }
+public:
+    string debruijn(int k,int n){
+        string res;
+        unordered_set<string> S;
+        for(int i=0;i<n;i++)res.push_back('a');
+        S.insert(res);
+        int length=pow(k,n)+n-1;
+        build(res,S,k,n,length);
+        return res;
+    }
+};
+```
