@@ -47,6 +47,17 @@ public:
     }
 };
 ```
+Gray Code Generator:
+```c++
+int graycode(int n){
+    int res=0, idx=0, helper[4]={0,1,1,0};
+    while(n){
+        res|=(helper[n&3]<<idx);
+        n>>=1; idx++;
+    }
+    return res;
+}
+```
 
 ## [Maximum Product of Word Lengths](#maximum-product-of-word-lengths)
 ```c++

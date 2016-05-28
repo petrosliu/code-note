@@ -61,7 +61,7 @@ h6 > a:link, h6 > a:visited, h6 > a:hover, h6 > a:active {
 }
 
 .book-header a.btn,
-dropdown-menu button {
+.dropdown-menu .buttons .button {
     -webkit-transition: all 350ms ease;
     -moz-transition: all 350ms ease;
     -o-transition: all 350ms ease;
