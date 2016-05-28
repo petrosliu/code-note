@@ -141,6 +141,10 @@ button.copy-code-button > kbd {
     color: #fff;
     background-color: #8e908c;
     border-radius: 3px;
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    transition: all 350ms ease;
 }
 button.copy-code-button:hover > kbd {
     background-color: #444;

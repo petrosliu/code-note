@@ -82,3 +82,38 @@ public:
 };
 ```
 See also [Multiset Method](/data-structure/set.html#count-of-range-sum)
+
+## [Count of Smaller Numbers After Self](#count-of-smaller-numbers-after-self)
+```c++
+class Solution {
+private:
+    void mergesort(vector<int>& res, vector<int>& nums, vector<int>& index, int l, int r){
+        if(l>=r) return;
+        int m=(l+r)/2;
+        mergesort(res,nums,index,l,m);
+        mergesort(res,nums,index,m+1,r);
+        int i,j=m+1,k;
+        for(i=l;i<=m;i++){
+            int val=nums[index[i]];
+            while(j<=r&&nums[index[j]]<val) j++;
+            res[index[i]]+=j-m-1;
+        }
+        int temp[r-l+1];
+        i=l;j=m+1;k=0;
+        while(i<=m&&j<=r) temp[k++]=(nums[index[i]]<=nums[index[j]])?index[i++]:index[j++];
+        while(i<=m) temp[k++]=index[i++];
+        while(j<=r) temp[k++]=index[j++];
+        for(i=l,k=0;i<=r;i++,k++) index[i]=temp[k];
+    }
+public:
+    vector<int> countSmaller(vector<int>& nums) {
+        int len=nums.size();
+        vector<int> index(len,0);
+        vector<int> res(len,0);
+        for(int i=0;i<len;i++) index[i]=i;
+        mergesort(res,nums,index,0,len-1);
+        return res;
+    }
+};
+```
+See also [Binary Search Tree Method](/data-structure/binary-search-tree.html#count-of-smaller-numbers-after-self)

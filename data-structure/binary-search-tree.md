@@ -43,6 +43,7 @@ public:
     }
 };
 ```
+See also [Merge Sort Method](/algorithm/divide-and-conquer.html#count-of-smaller-numbers-after-self)
 
 ## [Closest Binary Search Tree Value II](#closest-binary-search-tree-value-ii)
 ```c++
