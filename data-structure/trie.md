@@ -1,5 +1,5 @@
 # [Trie](#trie)
-
+**Prefix Tree**
 ## [Implement Trie](#implement-trie)
 ```c++
 class Trie {

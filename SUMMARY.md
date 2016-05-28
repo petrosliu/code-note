@@ -12,9 +12,10 @@
 * [Stack](data-structure/stack.md)
 * [Queue](data-structure/queue.md)
 * [Heap](data-structure/heap.md)
-* [Tree](data-structure/tree.md)
 * [Design](data-structure/design.md)
+* [Tree](data-structure/tree.md)
 * [Trie](data-structure/trie.md)
+* [Segment Tree](data-structure/segment-tree.md)
 * [Binary Indexed Tree](data-structure/binary-indexed-tree.md)
 * [Binary Search Tree](data-structure/binary-search-tree.md)
 
