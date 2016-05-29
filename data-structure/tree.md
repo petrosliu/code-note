@@ -103,3 +103,49 @@ public:
     }
 };
 ```
+
+## [Populating Next Right Pointers in Each Node](#populating-next-right-pointers-in-each-node)
+```c++
+class Solution {
+public:
+    void connect(TreeLinkNode *root) {
+        if(root==NULL) return;
+        while(root->left){
+            TreeLinkNode* node=root;
+            while(node){
+                node->left->next=node->right;
+                if(node->next) node->right->next=node->next->left;
+                node=node->next;
+            }
+            root=root->left;
+        }
+    }
+};
+```
+
+## [Populating Next Right Pointers in Each Node II](#populating-next-right-pointers-in-each-node-ii)
+```c++
+class Solution {
+public:
+    void connect(TreeLinkNode *root) {
+        TreeLinkNode *nextroot, *node, *prev;
+        while(root){
+            nextroot=NULL;node=root;prev=NULL;
+            while(node){
+                if(node->left){
+                    if(!nextroot) nextroot=node->left;
+                    if(prev) prev->next=node->left;
+                    prev=node->left;
+                }
+                if(node->right){
+                    if(!nextroot) nextroot=node->right;
+                    if(prev) prev->next=node->right;
+                    prev=node->right;
+                }
+                node=node->next;
+            }
+            root=nextroot;
+        }
+    }
+};
+```
