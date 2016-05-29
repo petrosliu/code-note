@@ -107,3 +107,35 @@ public:
     }
 };
 ```
+
+## [Group Anagrams](#group-anagrams)
+```c++
+class Solution {
+private:
+    inline void bucketsort(string& s){
+        int atoz[26]={},idx=0;;
+        for(auto& c:s) atoz[c-'a']++;
+        for(int i=0;i<26;i++){
+            while(atoz[i]){
+                s[idx++]=i+'a';
+                atoz[i]--;
+            }
+        }
+    }
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        unordered_map<string,vector<string>> hm;
+        for(auto& str:strs){
+            string s=str;
+            bucketsort(s);
+            hm[s].push_back(str);
+        }
+        vector<vector<string>> res;
+        for(auto& kv:hm){
+            res.push_back(kv.second);
+            sort(res.back().begin(),res.back().end());
+        }
+        return res;
+    }
+};
+```
