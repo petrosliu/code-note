@@ -51,3 +51,21 @@ public:
     }
 };
 ```
+
+## [Add Two Numbers](#add-two-numbers)
+```c++
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        int digit=0;
+        ListNode *root=new ListNode(0), *node=root;
+        while(l1||l2||digit){
+            if(l1){digit+=l1->val;l1=l1->next;}
+            if(l2){digit+=l2->val;l2=l2->next;}
+            node=node->next=new ListNode(digit%10);
+            digit/=10;
+        }
+        return root->next;
+    }
+};
+```
