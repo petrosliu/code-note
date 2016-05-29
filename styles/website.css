@@ -143,7 +143,7 @@ button.copy-code-button {
     right: 5px;
     padding: 3px;
     background-color: transparent;
-    color: #8e908c;
+    color: #ccc;
     border: none;
     -webkit-transition: all 350ms ease;
     -moz-transition: all 350ms ease;
@@ -160,7 +160,7 @@ button.copy-code-button > kbd {
     padding: 2px 4px;
     font-size: 90%;
     color: #fff;
-    background-color: #8e908c;
+    background-color: #ccc;
     border-radius: 3px;
     -webkit-transition: all 350ms ease;
     -moz-transition: all 350ms ease;

@@ -264,3 +264,25 @@ public:
     }
 };
 ```
+
+## [Longest Palindromic Substring](#longest-palindromic-substring)
+```c++
+class Solution {
+public:
+    string longestPalindrome(string& s) {
+        int maxlen=0,len=s.size(),l,r,dis;
+        string res;
+        for(int i=0;i<s.size();i++){
+            l=i;
+            while(i+1<len&&s[i+1]==s[l]) i++;
+            r=i;
+            while(l-1>=0&&r+1<len&&s[l-1]==s[r+1]) {l--; r++;}
+            dis=r-l+1;
+            if(dis>maxlen){
+                maxlen=dis; res=s.substr(l,dis);
+            }
+        }
+        return res;
+    }
+};
+```
