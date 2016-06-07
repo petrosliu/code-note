@@ -30,18 +30,22 @@ public:
 ```c++
 class Solution {
 public:
-    vector<int> majorityElement(vector<int>& nums, int k) {
-        int bound=nums.size()/3; // ⌊lenth/k⌋
+    vector<int> majorityElement(vector<int>& nums, int k=3) {
+        int bound=nums.size()/k;
         unordered_map<int,int> counter;
         for(auto& n:nums){
-            if(counter.find(n)==counter.end()&&counter.size()==k){
-                auto it=counter.begin();
-                while(it!=counter.end()){
-                    if(--(it->second)) it++;
-                    else counter.erase(it);
+            if(counter.find(n)==counter.end()){
+                if(counter.size()<k) counter[n]++;
+                else{
+                    auto it=counter.begin();
+                    while(it!=counter.end()){
+                        if(--(it->second)) it++;
+                        else counter.erase(it);
+                    }
+                    if(counter.size()<k) counter[n]++;
                 }
             }
-            counter[n]++;
+            else counter[n]++;
         }
         for(auto& kv:counter) kv.second=0;
         for(auto& n:nums) if(counter.find(n)!=counter.end()) counter[n]++;
