@@ -1,1 +1,16 @@
-<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="1024" sketch:type="MSArtboardGroup" stroke="#939da3" fill="#939da3"><path d="M303.151979,973.554126 L386.691187,973.554126 L565.347202,332.390702 L481.807993,332.390702 L303.151979,973.554126 Z" id="Path-2" sketch:type="MSShapeGroup"></path><path d="M711.44986,691.609298 L794.989068,691.609298 L973.645083,50.4458736 L890.105874,50.4458736 L711.44986,691.609298 Z" id="Path-2" sketch:type="MSShapeGroup"></path><path d="M729.292898,332.536777 L645.75369,332.536777 L547.029736,688.330503 L630.568945,688.330503 L729.292898,332.536777 Z" id="Path" sketch:type="MSShapeGroup"></path><path d="M399.313025,332.390702 L315.773817,332.390702 L217.049863,688.184428 L300.589071,688.184428 L399.313025,332.390702 Z" id="Path" sketch:type="MSShapeGroup"></path><path d="M50.4458736,691.609298 L133.985082,691.609298 L312.641096,50.4458736 L229.101888,50.4458736 L50.4458736,691.609298 Z" id="Path" sketch:type="MSShapeGroup"></path></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>1024</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1024" fill="#939DA3">
+            <rect id="Rectangle-1" x="462" y="162" width="100" height="700"></rect>
+            <rect id="Rectangle-1" x="612" y="512" width="100" height="350"></rect>
+            <rect id="Rectangle-1" x="762" y="162" width="100" height="700"></rect>
+            <rect id="Rectangle-1" x="312" y="162" width="100" height="350"></rect>
+            <rect id="Rectangle-1" x="162" y="162" width="100" height="700"></rect>
+        </g>
+    </g>
+</svg>
