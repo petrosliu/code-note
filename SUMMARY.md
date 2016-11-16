@@ -43,9 +43,9 @@
 * [Memory](cpp/memory.md)
 * [Thread](cpp/thread.md)
 
-### Part IV - More
+### Part IV - Misc
 
-* [Object-oriented Design](more/object-oriented-design.md)
-* [System Design](more/system-design.md)
-* [Big Data](more/big-data.md)
-* [Behavioral Questions](more/behavioral-questions.md)
+* [Object-oriented Design](misc/object-oriented-design.md)
+* [System Design](misc/system-design.md)
+* [Big Data](misc/big-data.md)
+* [Behavioral Questions](misc/behavioral-questions.md)
